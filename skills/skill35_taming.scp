@@ -13,10 +13,10 @@ DELAY=2.0
 STAT_STR=30
 STAT_DEX=60
 STAT_INT=40
-BONUS_STR=30
-BONUS_DEX=10
-BONUS_INT=60
-BONUS_STATS=20
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=0
+BONUS_STATS=0
 ADV_RATE=10.0,200.0,800.0
 
 ON=@Fail
@@ -24,5 +24,10 @@ ON=@Fail
 
 ON=@Abort
 	SRC.SYSMESSAGE You give up trying to tame the creature.
+	
+ON=@SUCCESS
+	src.act.tag.random_spawned_mount=
+	src.act.tag.random_spawned_animal=
+	src.act.set_pet_movedelay
 
 [EOF]

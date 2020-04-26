@@ -15,23 +15,23 @@ sphere_region.scp file.
 
 
 [DEFNAME COLOR_ORE]
-color_o_iron          0 //option: 0763
+color_o_iron       0763 //option: 0
 color_o_bronze     06d6
-color_o_gold       045e //option: 084d
+color_o_gold       2828 //045e //option: 084d
 color_o_copper     0641 //option: 060c
 color_o_oldcopper  0590
 color_o_dullcopper 060a
-color_o_silver     0482 //option: 0231
-color_o_shadow     0770
-color_o_bloodrock  04c2
-color_o_blackrock  0455
-color_o_mytheril   052d //option: 0528
-color_o_rose       0665
-color_o_verite     07d1
-color_o_agapite    0400
+color_o_silver     2830 //0482 //option: 0231
+color_o_shadow     2837 //0770
+color_o_bloodrock  2834 //04c2
+color_o_blackrock  2835 //0455
+color_o_mytheril   2836 //052d //option: 0528
+color_o_rose       2831 //0665
+color_o_verite     2832 //07d1
+color_o_agapite    2829 //0400
 color_o_rusty      0750
-color_o_valorite   0515
-
+color_o_valorite   2833 //0515
+color_o_tin			2555
 
 //////////
 // Ores //
@@ -81,6 +81,15 @@ TDATA1=i_ingot_copper
 VALUE=5
 ON=@Create
    COLOR=color_o_copper
+   
+[ITEMDEF i_ore_tin]
+ID=i_ore_iron
+NAME=Tin Ore
+SKILLMAKE=mining 75.0
+TDATA1=i_ingot_tin
+VALUE=5
+ON=@Create
+   COLOR=color_o_tin
 
 [ITEMDEF i_ore_gold]
 // Gold makes terrible armor.
@@ -352,6 +361,18 @@ DUPEITEM=01bf5
 //Pile of 5 silver ingots facing SW
 DUPEITEM=01bf5
 
+[ITEMDEF i_ingot_tin]
+NAME=Tin Ingot
+ID=i_ingot_iron
+SKILLMAKE=mining 70.0
+TDATA1=60.0
+TDATA2=100.0
+RESOURCES=i_ore_tin
+CATEGORY=Items by Professions
+SUBSECTION=Blacksmiths
+DESCRIPTION=Tin Ingot
+ON=@Create
+   COLOR=color_o_tin
 
 [ITEMDEF i_ingot_shadow]
 NAME=Shadow Ingot

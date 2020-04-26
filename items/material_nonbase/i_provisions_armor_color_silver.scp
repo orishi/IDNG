@@ -1,0 +1,431 @@
+[ITEMDEF i_SILVER_PLATEMAIL]
+NAME=Silver Platemail
+ID=i_platemail_chest
+ARMOR=22
+REQSTR=60
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Platemail
+RESOURCES=25 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_PLATEMAIL_ARMS]
+NAME=Silver Platemail Arms
+ID=i_platemail_arms
+ARMOR=22
+REQSTR=40
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Platemail Arms
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_PLATEMAIL_leggings]
+NAME=Silver Platemail Legs
+ID=i_platemail_leggings
+ARMOR=22
+REQSTR=60
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Platemail Legs
+RESOURCES=20 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_PLATEMAIL_GORGET]
+NAME=Silver Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=22
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Platemail Gorget
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_PLATEMAIL_GAUNTLETS]
+NAME=Silver Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=22
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Platemail Gauntlets
+RESOURCES=12 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_FEMALE_PLATEMAIL]
+NAME=Silver Platemail
+ID=i_armor_female_plate
+ARMOR=22
+REQSTR=30
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Female Platemail
+RESOURCES=25 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_CHAINMAIL_COIF]
+NAME=Silver Chainmail Coif
+ID=i_chainmail_coif
+ARMOR=18
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Chainmail Coif
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=36
+
+[ITEMDEF i_SILVER_CHAINMAIL_LEGGINGS]
+NAME=Silver Chainmail Leggings
+ID=i_chainmail_leggings
+ARMOR=18
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Chainmail Leggings
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS={46 58}
+
+[ITEMDEF i_SILVER_CHAINMAIL_TUNIC]
+NAME=Silver Chainmail Tunic
+ID=i_chainmail_tunic
+ARMOR=18
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Chainmail Tunic
+RESOURCES=20 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS={46 58}
+
+[ITEMDEF i_SILVER_RINGMAIL_LEGGINGS]
+NAME=Silver Ringmail Leggings
+ID=i_ringmail_leggings
+ARMOR=14
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Ringmail Leggings
+RESOURCES=16 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SILVER_RINGMAIL_SLEEVES]
+NAME=Silver Ringmail Sleeves
+ID=i_ringmail_sleeves
+ARMOR=14
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Ringmail Sleeves
+RESOURCES=14 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SILVER_RINGMAIL_GLOVES]
+NAME=Silver Ringmail Gloves
+ID=i_ringmail_gloves
+ARMOR=14
+REQSTR=20
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Ringmail Gloves
+RESOURCES=10 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SILVER_RINGMAIL_TUNIC]
+NAME=Silver Ringmail Tunic
+ID=i_ringmail_tunic
+ARMOR=14
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Ringmail Tunic
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SILVER_BUCKLER_SHIELD]
+NAME=Silver Buckler
+ID=i_shield_buckler
+ARMOR=22
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Buckler
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_HEATER_SHIELD]
+NAME=Silver Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=22
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Heater Shield
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_KITE_SHIELD]
+NAME=Silver Kite Shield
+ID=i_shield_kite_metal
+ARMOR=22
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Kite Shield
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+	
+[ITEMDEF i_SILVER_ROUND_SHIELD]
+NAME=Silver Round Shield
+ID=i_shield_round_bronze
+ARMOR=22
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Round Shield
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+	
+[ITEMDEF i_SILVER_METAL_SHIELD]
+NAME=Silver Metal Shield
+ID=i_shield_round_metal
+ARMOR=22
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Metal Shield
+RESOURCES=18 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+	
+[ITEMDEF i_SILVER_PLATE_HELM]
+NAME=Silver Plate Helm
+ID=i_platemail_helm
+ARMOR=22
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Plate Helm
+RESOURCES=15 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_CLOSED_HELM]
+NAME=Silver Closed Helm
+ID=i_helm_closed
+ARMOR=22
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Closed Helm
+RESOURCES=15 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_HELMET]
+NAME=Silver Helmet
+ID=i_helm_open
+ARMOR=22
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Helmet
+RESOURCES=15 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_BASCINET]
+NAME=Silver Bascinet
+ID=i_bascinet
+ARMOR=22
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Bascinet
+RESOURCES=15 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51
+
+[ITEMDEF i_SILVER_NOSE_HELM]
+NAME=Silver Nose Helm
+ID=i_helm_nose
+ARMOR=22
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_silver
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Silver
+DESCRIPTION=Nose Helm
+RESOURCES=15 i_ingot_silver
+SKILLMAKE=BLACKSMITHING 65.0
+
+ON=@Create
+	COLOR=color_o_silver
+	HITPOINTS=51

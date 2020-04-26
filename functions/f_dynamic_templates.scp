@@ -35,9 +35,9 @@ if (<serv.OptionFlags>& 080)	//check if is enabled OF_FileCommands
 	// Delete old table
 	mdb.execute DROP TABLE IF EXISTS '<def.DTL_DB_Table>'
 	if !<file.fileexist "<serv.scpfiles><def.DTL_DB_File>">
-		serv.log Couldn't find database file: "<serv.scpfiles><def.DTL_DB_File>".
-		return
-	endif
+	serv.log Couldn't find database file: "<serv.scpfiles><def.DTL_DB_File>".
+	return
+endif
 	// Import .db file into the MDB
 	mdb.importdb "<serv.scpfiles><def.DTL_DB_File>"
 	serv.log DynamicTemplateLoot database loaded in memory.

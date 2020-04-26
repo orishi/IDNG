@@ -1,0 +1,431 @@
+[ITEMDEF i_COPPER_PLATEMAIL]
+NAME=Copper Platemail
+ID=i_platemail_chest
+ARMOR=18
+REQSTR=60
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Platemail
+RESOURCES=25 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_PLATEMAIL_ARMS]
+NAME=Copper Platemail Arms
+ID=i_platemail_arms
+ARMOR=18
+REQSTR=40
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Platemail Arms
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_PLATEMAIL_leggings]
+NAME=Copper Platemail Legs
+ID=i_platemail_leggings
+ARMOR=18
+REQSTR=60
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Platemail Legs
+RESOURCES=20 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_PLATEMAIL_GORGET]
+NAME=Copper Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=18
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Platemail Gorget
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_PLATEMAIL_GAUNTLETS]
+NAME=Copper Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=18
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Platemail Gauntlets
+RESOURCES=12 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_FEMALE_PLATEMAIL]
+NAME=Copper Platemail
+ID=i_armor_female_plate
+ARMOR=18
+REQSTR=30
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Female Platemail
+RESOURCES=25 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_CHAINMAIL_COIF]
+NAME=Copper Chainmail Coif
+ID=i_chainmail_coif
+ARMOR=14
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Chainmail Coif
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=36
+
+[ITEMDEF i_COPPER_CHAINMAIL_LEGGINGS]
+NAME=Copper Chainmail Leggings
+ID=i_chainmail_leggings
+ARMOR=14
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Chainmail Leggings
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS={46 58}
+
+[ITEMDEF i_COPPER_CHAINMAIL_TUNIC]
+NAME=Copper Chainmail Tunic
+ID=i_chainmail_tunic
+ARMOR=14
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Chainmail Tunic
+RESOURCES=20 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS={46 58}
+
+[ITEMDEF i_COPPER_RINGMAIL_LEGGINGS]
+NAME=Copper Ringmail Leggings
+ID=i_ringmail_leggings
+ARMOR=12
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Ringmail Leggings
+RESOURCES=16 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS={41 51}
+
+[ITEMDEF i_COPPER_RINGMAIL_SLEEVES]
+NAME=Copper Ringmail Sleeves
+ID=i_ringmail_sleeves
+ARMOR=12
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Ringmail Sleeves
+RESOURCES=14 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS={41 51}
+
+[ITEMDEF i_COPPER_RINGMAIL_GLOVES]
+NAME=Copper Ringmail Gloves
+ID=i_ringmail_gloves
+ARMOR=12
+REQSTR=20
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Ringmail Gloves
+RESOURCES=10 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS={41 51}
+
+[ITEMDEF i_COPPER_RINGMAIL_TUNIC]
+NAME=Copper Ringmail Tunic
+ID=i_ringmail_tunic
+ARMOR=12
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Ringmail Tunic
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS={41 51}
+
+[ITEMDEF i_COPPER_BUCKLER_SHIELD]
+NAME=Copper Buckler
+ID=i_shield_buckler
+ARMOR=18
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Buckler
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_HEATER_SHIELD]
+NAME=Copper Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=18
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Heater Shield
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_KITE_SHIELD]
+NAME=Copper Kite Shield
+ID=i_shield_kite_metal
+ARMOR=18
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Kite Shield
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+	
+[ITEMDEF i_COPPER_ROUND_SHIELD]
+NAME=Copper Round Shield
+ID=i_shield_round_bronze
+ARMOR=18
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Round Shield
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+	
+[ITEMDEF i_COPPER_METAL_SHIELD]
+NAME=Copper Metal Shield
+ID=i_shield_round_metal
+ARMOR=18
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Metal Shield
+RESOURCES=18 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+	
+[ITEMDEF i_COPPER_PLATE_HELM]
+NAME=Copper Plate Helm
+ID=i_platemail_helm
+ARMOR=18
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Plate Helm
+RESOURCES=15 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_CLOSED_HELM]
+NAME=Copper Closed Helm
+ID=i_helm_closed
+ARMOR=18
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Closed Helm
+RESOURCES=15 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_HELMET]
+NAME=Copper Helmet
+ID=i_helm_open
+ARMOR=18
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Helmet
+RESOURCES=15 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_BASCINET]
+NAME=Copper Bascinet
+ID=i_bascinet
+ARMOR=18
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Bascinet
+RESOURCES=15 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51
+
+[ITEMDEF i_COPPER_NOSE_HELM]
+NAME=Copper Nose Helm
+ID=i_helm_nose
+ARMOR=18
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_copper
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Copper
+DESCRIPTION=Nose Helm
+RESOURCES=15 i_ingot_copper
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_copper
+	HITPOINTS=51

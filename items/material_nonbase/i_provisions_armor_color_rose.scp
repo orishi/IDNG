@@ -1,0 +1,431 @@
+[ITEMDEF i_ROSE_PLATEMAIL]
+NAME=Rose Platemail
+ID=i_platemail_chest
+ARMOR=25
+REQSTR=60
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Platemail
+RESOURCES=25 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_PLATEMAIL_ARMS]
+NAME=Rose Platemail Arms
+ID=i_platemail_arms
+ARMOR=25
+REQSTR=40
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Platemail Arms
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_PLATEMAIL_leggings]
+NAME=Rose Platemail Legs
+ID=i_platemail_leggings
+ARMOR=25
+REQSTR=60
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Platemail Legs
+RESOURCES=20 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_PLATEMAIL_GORGET]
+NAME=Rose Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=25
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Platemail Gorget
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_PLATEMAIL_GAUNTLETS]
+NAME=Rose Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=25
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Platemail Gauntlets
+RESOURCES=12 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_FEMALE_PLATEMAIL]
+NAME=Rose Platemail
+ID=i_armor_female_plate
+ARMOR=25
+REQSTR=30
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Female Platemail
+RESOURCES=25 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_CHAINMAIL_COIF]
+NAME=Rose Chainmail Coif
+ID=i_chainmail_coif
+ARMOR=20
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Chainmail Coif
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=36
+
+[ITEMDEF i_ROSE_CHAINMAIL_LEGGINGS]
+NAME=Rose Chainmail Leggings
+ID=i_chainmail_leggings
+ARMOR=20
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Chainmail Leggings
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS={46 58}
+
+[ITEMDEF i_ROSE_CHAINMAIL_TUNIC]
+NAME=Rose Chainmail Tunic
+ID=i_chainmail_tunic
+ARMOR=20
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Chainmail Tunic
+RESOURCES=20 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS={46 58}
+
+[ITEMDEF i_ROSE_RINGMAIL_LEGGINGS]
+NAME=Rose Ringmail Leggings
+ID=i_ringmail_leggings
+ARMOR=16
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Ringmail Leggings
+RESOURCES=16 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS={41 51}
+
+[ITEMDEF i_ROSE_RINGMAIL_SLEEVES]
+NAME=Rose Ringmail Sleeves
+ID=i_ringmail_sleeves
+ARMOR=16
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Ringmail Sleeves
+RESOURCES=14 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS={41 51}
+
+[ITEMDEF i_ROSE_RINGMAIL_GLOVES]
+NAME=Rose Ringmail Gloves
+ID=i_ringmail_gloves
+ARMOR=16
+REQSTR=20
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Ringmail Gloves
+RESOURCES=10 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS={41 51}
+
+[ITEMDEF i_ROSE_RINGMAIL_TUNIC]
+NAME=Rose Ringmail Tunic
+ID=i_ringmail_tunic
+ARMOR=16
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Ringmail Tunic
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS={41 51}
+
+[ITEMDEF i_ROSE_BUCKLER_SHIELD]
+NAME=Rose Buckler
+ID=i_shield_buckler
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Buckler
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_HEATER_SHIELD]
+NAME=Rose Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Heater Shield
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_KITE_SHIELD]
+NAME=Rose Kite Shield
+ID=i_shield_kite_metal
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Kite Shield
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+	
+[ITEMDEF i_ROSE_ROUND_SHIELD]
+NAME=Rose Round Shield
+ID=i_shield_round_bronze
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Round Shield
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+	
+[ITEMDEF i_ROSE_METAL_SHIELD]
+NAME=Rose Metal Shield
+ID=i_shield_round_metal
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Metal Shield
+RESOURCES=18 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+	
+[ITEMDEF i_ROSE_PLATE_HELM]
+NAME=Rose Plate Helm
+ID=i_platemail_helm
+ARMOR=25
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Plate Helm
+RESOURCES=15 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_CLOSED_HELM]
+NAME=Rose Closed Helm
+ID=i_helm_closed
+ARMOR=25
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Closed Helm
+RESOURCES=15 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_HELMET]
+NAME=Rose Helmet
+ID=i_helm_open
+ARMOR=25
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Helmet
+RESOURCES=15 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_BASCINET]
+NAME=Rose Bascinet
+ID=i_bascinet
+ARMOR=25
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Bascinet
+RESOURCES=15 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51
+
+[ITEMDEF i_ROSE_NOSE_HELM]
+NAME=Rose Nose Helm
+ID=i_helm_nose
+ARMOR=25
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_rose
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Rose
+DESCRIPTION=Nose Helm
+RESOURCES=15 i_ingot_rose
+SKILLMAKE=BLACKSMITHING 60.0
+
+ON=@Create
+	COLOR=color_o_rose
+	HITPOINTS=51

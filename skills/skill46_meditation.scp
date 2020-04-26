@@ -11,26 +11,26 @@ TITLE=Stoic
 DELAY=2.0,1.0
 STAT_STR=10
 STAT_DEX=10
-STAT_INT=100
-BONUS_STR=5
-BONUS_DEX=90
-BONUS_INT=5
-BONUS_STATS=20
+STAT_INT=161
+BONUS_STR=0
+BONUS_DEX=0
+BONUS_INT=0
+BONUS_STATS=0
 ADV_RATE=10.0,200.0,800.0
 
 ON=@Fail
-	//SRC.f_meditation_setup
+	SRC.f_meditation_setup
 	SRC.SYSMESSAGE You lose your concentration.
 
 ON=@Abort
-	//SRC.f_meditation_setup
+	SRC.f_meditation_setup
 	SRC.SYSMESSAGE You stop concentrating.
 
 ON=@Start
-	//SRC.f_meditation_setup
+	SRC.f_meditation_setup
 
 ON=@Success
-	//SRC.f_meditation_setup
+	SRC.f_meditation_setup
 
 
 [function f_meditation_setup]

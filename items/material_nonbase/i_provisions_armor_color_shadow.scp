@@ -1,0 +1,431 @@
+[ITEMDEF i_SHADOW_PLATEMAIL]
+NAME=Shadow Platemail
+ID=i_platemail_chest
+ARMOR=45
+REQSTR=60
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Platemail
+RESOURCES=25 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_PLATEMAIL_ARMS]
+NAME=Shadow Platemail Arms
+ID=i_platemail_arms
+ARMOR=45
+REQSTR=40
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Platemail Arms
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_PLATEMAIL_leggings]
+NAME=Shadow Platemail Legs
+ID=i_platemail_leggings
+ARMOR=45
+REQSTR=60
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Platemail Legs
+RESOURCES=20 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_PLATEMAIL_GORGET]
+NAME=Shadow Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=45
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Platemail Gorget
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_PLATEMAIL_GAUNTLETS]
+NAME=Shadow Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=45
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Platemail Gauntlets
+RESOURCES=12 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_FEMALE_PLATEMAIL]
+NAME=Shadow Platemail
+ID=i_armor_female_plate
+ARMOR=45
+REQSTR=30
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Female Platemail
+RESOURCES=25 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_CHAINMAIL_COIF]
+NAME=Shadow Chainmail Coif
+ID=i_chainmail_coif
+ARMOR=36
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Chainmail Coif
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=36
+
+[ITEMDEF i_SHADOW_CHAINMAIL_LEGGINGS]
+NAME=Shadow Chainmail Leggings
+ID=i_chainmail_leggings
+ARMOR=36
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Chainmail Leggings
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={46 58}
+
+[ITEMDEF i_SHADOW_CHAINMAIL_TUNIC]
+NAME=Shadow Chainmail Tunic
+ID=i_chainmail_tunic
+ARMOR=36
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Chainmail Tunic
+RESOURCES=20 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={46 58}
+
+[ITEMDEF i_SHADOW_RINGMAIL_LEGGINGS]
+NAME=Shadow Ringmail Leggings
+ID=i_ringmail_leggings
+ARMOR=29
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Ringmail Leggings
+RESOURCES=16 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SHADOW_RINGMAIL_SLEEVES]
+NAME=Shadow Ringmail Sleeves
+ID=i_ringmail_sleeves
+ARMOR=29
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Ringmail Sleeves
+RESOURCES=14 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SHADOW_RINGMAIL_GLOVES]
+NAME=Shadow Ringmail Gloves
+ID=i_ringmail_gloves
+ARMOR=29
+REQSTR=20
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Ringmail Gloves
+RESOURCES=10 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SHADOW_RINGMAIL_TUNIC]
+NAME=Shadow Ringmail Tunic
+ID=i_ringmail_tunic
+ARMOR=29
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Ringmail Tunic
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS={41 51}
+
+[ITEMDEF i_SHADOW_BUCKLER_SHIELD]
+NAME=Shadow Buckler
+ID=i_shield_buckler
+ARMOR=25
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Buckler
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_HEATER_SHIELD]
+NAME=Shadow Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=45
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Heater Shield
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_KITE_SHIELD]
+NAME=Shadow Kite Shield
+ID=i_shield_kite_metal
+ARMOR=45
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Kite Shield
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+	
+[ITEMDEF i_SHADOW_ROUND_SHIELD]
+NAME=Shadow Round Shield
+ID=i_shield_round_bronze
+ARMOR=45
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Round Shield
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+	
+[ITEMDEF i_SHADOW_METAL_SHIELD]
+NAME=Shadow Metal Shield
+ID=i_shield_round_metal
+ARMOR=45
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Metal Shield
+RESOURCES=18 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+	
+[ITEMDEF i_SHADOW_PLATE_HELM]
+NAME=Shadow Plate Helm
+ID=i_platemail_helm
+ARMOR=45
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Plate Helm
+RESOURCES=15 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_CLOSED_HELM]
+NAME=Shadow Closed Helm
+ID=i_helm_closed
+ARMOR=45
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Closed Helm
+RESOURCES=15 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_HELMET]
+NAME=Shadow Helmet
+ID=i_helm_open
+ARMOR=45
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Helmet
+RESOURCES=15 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_BASCINET]
+NAME=Shadow Bascinet
+ID=i_bascinet
+ARMOR=45
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Bascinet
+RESOURCES=15 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51
+
+[ITEMDEF i_SHADOW_NOSE_HELM]
+NAME=Shadow Nose Helm
+ID=i_helm_nose
+ARMOR=45
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_shadow
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Shadow
+DESCRIPTION=Nose Helm
+RESOURCES=15 i_ingot_shadow
+SKILLMAKE=BLACKSMITHING 100.0
+
+ON=@Create
+	COLOR=color_o_shadow
+	HITPOINTS=51

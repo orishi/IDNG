@@ -1958,7 +1958,7 @@ FLAGS=REGION_FLAG_GUARDED|REGION_FLAG_NOBUILDING|REGION_FLAG_UNDERGROUND
 P=2558,499,0,0
 RECT=2556,501,2562,504,0
 RECT=2556,474,2582,501,0
-EVENTS=r_default_rock
+EVENTS=r_default_rock, r_cleanup
 
 [AREADEF a_entrance_from_nrinsic_1]
 EVENTS=r_default,r_default_rock,r_default_water,r_default_tree,r_default_grass

@@ -1,0 +1,431 @@
+[ITEMDEF i_BLOODROCK_PLATEMAIL]
+NAME=Blood Rock Platemail
+ID=i_platemail_chest
+ARMOR=35
+REQSTR=60
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Platemail
+RESOURCES=25 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_PLATEMAIL_ARMS]
+NAME=Blood Rock Platemail Arms
+ID=i_platemail_arms
+ARMOR=35
+REQSTR=40
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Platemail Arms
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_PLATEMAIL_leggings]
+NAME=Blood Rock Platemail Legs
+ID=i_platemail_leggings
+ARMOR=35
+REQSTR=60
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Platemail Legs
+RESOURCES=20 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_PLATEMAIL_GORGET]
+NAME=Blood Rock Platemail Gorget
+ID=i_platemail_gorget
+ARMOR=35
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Platemail Gorget
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_PLATEMAIL_GAUNTLETS]
+NAME=Blood Rock Platemail Gauntlets
+ID=i_platemail_gloves
+ARMOR=35
+REQSTR=30
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Platemail Gauntlets
+RESOURCES=12 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_FEMALE_PLATEMAIL]
+NAME=Blood Rock Platemail
+ID=i_armor_female_plate
+ARMOR=35
+REQSTR=30
+WEIGHT=10
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Female Platemail
+RESOURCES=25 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_CHAINMAIL_COIF]
+NAME=Blood Rock Chainmail Coif
+ID=i_chainmail_coif
+ARMOR=28
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Chainmail Coif
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=36
+
+[ITEMDEF i_BLOODROCK_CHAINMAIL_LEGGINGS]
+NAME=Blood Rock Chainmail Leggings
+ID=i_chainmail_leggings
+ARMOR=28
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Chainmail Leggings
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS={46 58}
+
+[ITEMDEF i_BLOODROCK_CHAINMAIL_TUNIC]
+NAME=Blood Rock Chainmail Tunic
+ID=i_chainmail_tunic
+ARMOR=28
+REQSTR=20
+WEIGHT=7
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_chain
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Chainmail Tunic
+RESOURCES=20 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS={46 58}
+
+[ITEMDEF i_BLOODROCK_RINGMAIL_LEGGINGS]
+NAME=Blood Rock Ringmail Leggings
+ID=i_ringmail_leggings
+ARMOR=22
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Ringmail Leggings
+RESOURCES=16 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS={41 51}
+
+[ITEMDEF i_BLOODROCK_RINGMAIL_SLEEVES]
+NAME=Blood Rock Ringmail Sleeves
+ID=i_ringmail_sleeves
+ARMOR=22
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Ringmail Sleeves
+RESOURCES=14 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS={41 51}
+
+[ITEMDEF i_BLOODROCK_RINGMAIL_GLOVES]
+NAME=Blood Rock Ringmail Gloves
+ID=i_ringmail_gloves
+ARMOR=22
+REQSTR=20
+WEIGHT=2
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Ringmail Gloves
+RESOURCES=10 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS={41 51}
+
+[ITEMDEF i_BLOODROCK_RINGMAIL_TUNIC]
+NAME=Blood Rock Ringmail Tunic
+ID=i_ringmail_tunic
+ARMOR=22
+REQSTR=20
+WEIGHT=15
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_ring
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Ringmail Tunic
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS={41 51}
+
+[ITEMDEF i_BLOODROCK_BUCKLER_SHIELD]
+NAME=Blood Rock Buckler
+ID=i_shield_buckler
+ARMOR=35
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Buckler
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_HEATER_SHIELD]
+NAME=Blood Rock Heater Shield
+ID=I_SHIELD_HEATER
+ARMOR=35
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Heater Shield
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_KITE_SHIELD]
+NAME=Blood Rock Kite Shield
+ID=i_shield_kite_metal
+ARMOR=35
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Kite Shield
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+	
+[ITEMDEF i_BLOODROCK_ROUND_SHIELD]
+NAME=Blood Rock Round Shield
+ID=i_shield_round_bronze
+ARMOR=35
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Round Shield
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+	
+[ITEMDEF i_BLOODROCK_METAL_SHIELD]
+NAME=Blood Rock Metal Shield
+ID=i_shield_round_metal
+ARMOR=35
+REQSTR=30
+WEIGHT=8
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Metal Shield
+RESOURCES=18 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+	
+[ITEMDEF i_BLOODROCK_PLATE_HELM]
+NAME=Blood Rock Plate Helm
+ID=i_platemail_helm
+ARMOR=35
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Plate Helm
+RESOURCES=15 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_CLOSED_HELM]
+NAME=Blood Rock Closed Helm
+ID=i_helm_closed
+ARMOR=35
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Closed Helm
+RESOURCES=15 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_HELMET]
+NAME=Blood Rock Helmet
+ID=i_helm_open
+ARMOR=35
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Helmet
+RESOURCES=15 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_BASCINET]
+NAME=Blood Rock Bascinet
+ID=i_bascinet
+ARMOR=35
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Bascinet
+RESOURCES=15 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51
+
+[ITEMDEF i_BLOODROCK_NOSE_HELM]
+NAME=Blood Rock Nose Helm
+ID=i_helm_nose
+ARMOR=35
+REQSTR=20
+WEIGHT=5
+TEVENTS=ei_material_nonbase
+TEVENTS=ei_armor_bloodrock
+TEVENTS=ei_armor_plate
+CATEGORY=Provisions - Armor - Colored
+SUBSECTION=Blood Rock
+DESCRIPTION=Nose Helm
+RESOURCES=15 i_ingot_bloodrock
+SKILLMAKE=BLACKSMITHING 90.0
+
+ON=@Create
+	COLOR=color_o_bloodrock
+	HITPOINTS=51

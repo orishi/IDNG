@@ -70,6 +70,24 @@ stones/guilds/
 stones/towns/
 housing/
 
+scripts/custom/
+scripts/custom/worldgen/
+scripts/custom/worldgen/spawns/
+scripts/custom/worldgen/spawns/felucca/
+scripts/custom/worldgen/spawns/trammel/
+scripts/custom/worldgen/spawns/ilshenar/
+scripts/custom/worldgen/spawns/malas/
+scripts/custom/worldgen/spawns/tokuno/
+scripts/custom/worldgen/spawns/termur/
+scripts/custom/worldgen/decoration/
+scripts/custom/worldgen/decoration/felucca/
+scripts/custom/worldgen/decoration/ilshenar/
+scripts/custom/worldgen/decoration/malas/
+scripts/custom/worldgen/decoration/misc/
+scripts/custom/worldgen/decoration/termur/
+scripts/custom/worldgen/decoration/tokuno/
+scripts/custom/worldgen/decoration/trammel/
+
 // maps
 maps/map0/map0_starts.scp
 maps/map0/map0_moongates.scp
@@ -122,95 +140,23 @@ maps/map5/map5_teleports_tol.scp
 maps/map5/map5_moongates.scp
 maps/map5/map5_moongates_tol.scp
 
-//custom/
-
 [OBSCENE]
 
 [FAME]
-0,2000,6000
-Anonymous
-Known
-Famous
+0
+<none>
 
 [KARMA]
--10000,-6000,-2000,2001,6001
-Wicked
-Belligerent
-Neutral
-Kindly
-Goodhearted
+0
+<none>
 
 [NOTOTITLES] // NotoTitles
-9900,5000,1000,500,100,-100,-500,-1000,-5000,-9900    // karma levels
-500,1000,5000,9900                                    // fame levels
-
-// highest karma
-Trustworthy
-Estimable
-Great
-Glorious
-Glorious
-
-Honest
-Commendable
-Famed
-Illustrious
-Illustrious
-
-Good
-Honorable
-Admirable
-Noble
-Noble
-
-Kind
-Respectable
-Proper
-Eminent
-Eminent
-
-Fair
-Upstanding
-Reputable
-Distinguished
-Distinguished
-
+0    // karma levels
+0    // fame levels
 <none>
-Notable
-Prominent
-Renowned
-Renowned
-
-Rude
-Disreputable
-Notorious
-Infamous
-Dishonored
-
-Unsavory
-Dishonorable
-Ignoble
-Sinister
-Sinister
-
-Scoundrel
-Malicious
-Vile
-Villainous
-Dark
-
-Despicable
-Dastardly
-Wicked
-Evil
-Evil
-
-Outcast
-Wretched
-Nefarious
-Dread
-Dread
-
+<none>
+<none>
+<none>
 
 [RUNES]
 An

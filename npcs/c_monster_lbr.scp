@@ -420,7 +420,7 @@ ON=@Create
 
 ON=@CreateLoot
     ITEM=i_gold,{770 1120}
-    ITEM=random_weapon
+    //ITEM=random_weapon
 
 
 [CHARDEF 067]
@@ -1991,7 +1991,7 @@ ON=@Create
 
 ON=@CreateLoot
     ITEM=i_gold,{700 1100}
-    ITEM=random_weapon
+    //ITEM=random_weapon
 
 
 [CHARDEF 0af]
@@ -2096,7 +2096,7 @@ ON=@Create
 
 ON=@CreateLoot
     ITEM=i_gold,{770 920}
-    ITEM=random_weapon
+    //ITEM=random_weapon
 
 
 [CHARDEF 0b6]

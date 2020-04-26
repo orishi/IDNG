@@ -7,17 +7,23 @@ VERSION=X1
 [SPEECH spk_pet]
 // Pets that cannot talk
 ON=ATTACK
+	set_pet_movedelay
 ON=COME
+	set_pet_movedelay
 ON=DROP
 ON=DROP ALL
 ON=FOLLOW
+	set_pet_movedelay
 ON=FOLLOW ME
+	set_pet_movedelay
 ON=FRIEND
 ON=GO
+	set_pet_movedelay
 ON=GUARD
 ON=GUARD ME
 ON=KILL
 ON=RELEASE
+	unset_pet_movedelay
 ON=SPEAK
 ON=STAY
 ON=STAY HERE

@@ -28,8 +28,8 @@ SKILLMENU=sm_leather_female_armor
 ON=i_BACKPACK Misc
 SKILLMENU=sm_leather_misc
 
-ON=i_mask_blue Masks
-SKILLMENU=sm_leather_masks
+//ON=i_mask_blue Masks
+//SKILLMENU=sm_leather_masks
 
 [SKILLMENU sm_tailor_cloth]
 Cloth

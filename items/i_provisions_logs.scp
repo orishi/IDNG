@@ -14,13 +14,14 @@ sphere_region.scp file.
 
 
 [DEFNAME colors_resources_wood]
-color_l_ash        04a7
-color_l_oak        07da
-color_l_yew        04a8
-color_l_bloodwood  04aa
-color_l_frostwood  047f
-color_l_heartwood  04a9
-
+color_l_ash        070a
+color_l_oak        083f
+color_l_yew        2906
+color_l_bloodwood  2834
+color_l_frostwood  2876
+color_l_heartwood  2832
+color_l_mahagon		2914
+color_l_ebony  		2913
 
 [ITEMDEF 01bd7]
 DEFNAME=i_board
@@ -104,13 +105,14 @@ COLOR=color_l_ash
 ID=i_board
 NAME=ash board%s
 TYPE=t_board
+RESOURCES=1 i_log_ash
+SKILLMAKE=55.0 carpentry, t_carpentry
 CATEGORY=Resources
 SUBSECTION=Boards
 DESCRIPTION=Ash Board
 
 ON=@Create
 COLOR=color_l_ash
-
 
 [ITEMDEF i_log_oak]
 ID=i_log
@@ -127,13 +129,14 @@ COLOR=color_l_oak
 ID=i_board
 NAME=oak board%s
 TYPE=t_board
+RESOURCES=1 i_log_oak
+SKILLMAKE=50.0 carpentry, t_carpentry
 CATEGORY=Resources
 SUBSECTION=Boards
 DESCRIPTION=Oak Board
 
 ON=@Create
 COLOR=color_l_oak
-
 
 [ITEMDEF i_log_yew]
 ID=i_log
@@ -150,13 +153,14 @@ COLOR=color_l_yew
 ID=i_board
 NAME=Yew board%s
 TYPE=t_board
+RESOURCES=1 i_log_yew
+SKILLMAKE=Carpentry 85.0, t_carpentry
 CATEGORY=Resources
 SUBSECTION=Boards
 DESCRIPTION=Yew Board
 
 ON=@Create
 COLOR=color_l_yew
-
 
 [ITEMDEF i_log_heartwood]
 ID=i_log
@@ -173,13 +177,14 @@ COLOR=color_l_heartwood
 ID=i_board
 NAME=heartwood board%s
 TYPE=t_board
+RESOURCES=1 i_log_heartwood
+SKILLMAKE=95.0 carpentry, t_carpentry
 CATEGORY=Resources
 SUBSECTION=Boards
 DESCRIPTION=Heartwood Board
 
 ON=@Create
 COLOR=color_l_heartwood
-
 
 [ITEMDEF i_log_frostwood]
 ID=i_log
@@ -196,13 +201,14 @@ COLOR=color_l_frostwood
 ID=i_board
 NAME=frostwood board%s
 TYPE=t_board
+RESOURCES=1 i_log_frostwood
+SKILLMAKE=95.0 carpentry, t_carpentry
 CATEGORY=Resources
 SUBSECTION=Boards
 DESCRIPTION=Frostwood Board
 
 ON=@Create
 COLOR=color_l_frostwood
-
 
 [ITEMDEF i_log_bloodwood]
 ID=i_log
@@ -219,6 +225,8 @@ COLOR=color_l_bloodwood
 ID=i_board
 NAME=bloodwood board%s
 TYPE=t_board
+RESOURCES=1 i_log_bloodwood
+SKILLMAKE=95.0 carpentry, t_carpentry
 CATEGORY=Resources
 SUBSECTION=Boards
 DESCRIPTION=Bloodwood Board
@@ -226,4 +234,53 @@ DESCRIPTION=Bloodwood Board
 ON=@Create
 COLOR=color_l_bloodwood
 
+[ITEMDEF i_log_mahagon]
+ID=i_log
+NAME=mahagon log%s
+TYPE=t_log
+
+ON=@CREATE
+COLOR=color_l_mahagon
+
+CATEGORY=Resources
+SUBSECTION=Wood
+DESCRIPTION=Mahagon Log
+
+[ITEMDEF i_board_mahagon] 
+ID=i_board 
+name=mahagon board%s 
+TYPE=t_board 
+RESOURCES=1 i_log_mahagon 
+SKILLMAKE=65.0 carpentry, t_carpentry
+CATEGORY=Resources 
+SUBSECTION=Boards 
+DESCRIPTION=Mahagon Board
+
+ON=@CREATE
+COLOR=color_l_mahagon
+
+[ITEMDEF i_log_ebony]
+ID=i_log
+NAME=ebony log%s
+TYPE=t_log
+
+ON=@CREATE
+COLOR=color_l_ebony
+
+CATEGORY=Resources
+SUBSECTION=Wood
+DESCRIPTION=Ebony Log
+
+[ITEMDEF i_board_ebony] 
+ID=i_board 
+name=ebony board%s 
+TYPE=t_board 
+RESOURCES=1 i_log_ebony 
+SKILLMAKE=75.0 carpentry, t_carpentry
+CATEGORY=Resources 
+SUBSECTION=Boards 
+DESCRIPTION=Ebony Board
+
+ON=@CREATE
+COLOR=color_l_ebony
 [EOF]

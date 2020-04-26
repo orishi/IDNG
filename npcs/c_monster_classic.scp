@@ -770,7 +770,7 @@ ON=@Create
 
 ON=@CreateLoot
      ITEM=i_gold,{50 100}
-     ITEM=random_weapon
+     //ITEM=random_weapon
      //ITEM=i_bola_ball
      ITEM=i_treasure_map1,R99
 
@@ -1651,7 +1651,7 @@ ON=@Create
 
 ON=@CreateLoot
      ITEM=i_gold,{50 100}
-     ITEM=random_weapon
+     //ITEM=random_weapon
      ITEM=i_treasure_map1,R99
 
 
@@ -1930,7 +1930,7 @@ ON=@Create
 
 ON=@CreateLoot
      ITEM=i_gold,{25 50}
-     ITEM=random_bone_armor
+     //ITEM=random_bone_armor
 
 
 [CHARDEF 033]
@@ -2155,7 +2155,7 @@ ON=@Create
 
 ON=@CreateLoot
      ITEM=i_gold,{25 50}
-     ITEM=random_bone_armor
+     //ITEM=random_bone_armor
 
 
 [CHARDEF 039]
@@ -3783,7 +3783,7 @@ ON=@Create
 
 ON=@CreateLoot
      ITEM=i_gold,{50 100}
-     ITEM=random_weapon
+     //ITEM=random_weapon
 
 
 [CHARDEF 09b]
@@ -3988,7 +3988,7 @@ DESCRIPTION=Cat
 ON=@Create
      NPC=brain_animal
      
-     KARMA=150
+     KARMA=0
      
      STR=9
      DEX=35
@@ -4544,7 +4544,7 @@ DESCRIPTION=Dog
 ON=@Create
      NPC=brain_animal
      
-     KARMA=300
+     KARMA=0
      
      STR={27, 37}
      DEX={28, 43}

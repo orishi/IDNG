@@ -1090,7 +1090,7 @@ ON=@Create
 
 ON=@CreateLoot
     ITEM=i_gold,{1500,1900}
-    ITEM=random_weapon
+    //ITEM=random_weapon
     ITEM=random_armor
     ITEM=i_bandage,{1,5}
 //    ITEM=level 5 treasure_map
