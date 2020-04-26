@@ -269,9 +269,6 @@ SKILLMENU=sm_copper_armor
 ON=i_decorative_armor Silver Armor
 SKILLMENU=sm_silver_armor
 
-ON=i_decorative_armor MYTHERIL Armor
-SKILLMENU=sm_MYTHERIL_armor
-
 ON=i_decorative_armor Black Rock Armor
 SKILLMENU=sm_blackrock_armor
 
