@@ -1,0 +1,41 @@
+[dialog d_race_player]
+50,50
+noclose
+
+page 0
+resizepic 0 0 5054 300 140
+dhtmlgump 10 10 280 20 1000 0 <DEF.CENTER>Zvol si rasu své postavy:<DEF.CENTERE>
+
+button 10 40 4005 4006 1 0 100
+dcroppedtext 50 40 120 20 1000 Člověk
+
+button 10 70 4005 4006 1 0 101
+dcroppedtext 50 70 120 20 1000 Trpaslík
+
+button 10 100 4005 4006 1 0 102
+dcroppedtext 50 100 120 20 1000 Elf
+
+[dialog d_race_player button]
+on=100
+title=Clovek
+tag.race=1
+tag.race_text=Clovek
+stone=0
+
+on=101
+title=Trpaslik
+color={1129 1130 1135 1136 1137 1139 1542 1534}
+oskin=<color>
+tag.race=2
+tag.race_text=Trpaslik
+stone=0
+go Minoc
+
+on=102
+title=Elf
+color={741 746 751 756 761 2419}
+oskin=<color>
+tag.race=3
+tag.race_text=Elf
+stone=0
+go Yew

@@ -1,0 +1,78 @@
+[events e_npc]
+on=@hittry
+if !(<argo.uid>)
+	local.weaponSkill=<eval <wrestling>/10>
+	local.weaponSpeed=60
+else
+	local.weaponSkill=<eval <<weapon.skill>>/10>
+	local.weaponSpeed=<argo.speed>
+endif
+
+if (<local.weaponSkill> < 10)
+	local.weaponSkill=10
+endif
+
+local.missChance=<eval rand(100)+1>
+if (<local.missChance> > <local.weaponSkill>)
+	actdiff=-1000
+else
+	actdiff=1000
+endif
+
+if (<dex> >= 100)
+	argn1=<eval 80-<argo.speed>>
+else
+	argn1=<eval 80-<argo.speed>-((100-<dex>)/2)>
+endif
+if (<argn1> < 10)
+	argn1=10
+endif
+
+on=@hit
+local.itemdamagechance=0
+
+if !(<argo.uid>)
+	local.weaponDamage=<eval <wrestling>/100>
+	local.weaponSkill=<eval <wrestling>/10>
+else
+	local.weaponDamage=<eval rand(<argo.dam>*5)>
+	local.weaponSkill=<eval <<weapon.skill>>/10>
+endif
+if (<eval <local.weaponSkill>> < 10)
+	local.weaponSkill=10
+endif
+
+local.damage=<eval (<local.weaponDamage>*<local.weaponSkill>)/100>
+local.damage=<eval ((<local.damage>*(100-<src.ar>))/100)>
+
+if (<local.damage> < 1)
+	local.damage=1
+endif
+
+argn1=<local.damage>
+argn2=<def.dam_god>
+
+on=@gethit
+local.itemdamagechance=0
+
+if (<findlayer.2.type>==t_shield)
+	local.parryChance=<eval (((<parrying>/10)*<findlayer.2.ar>)/100)>
+	local.parryChanceRand=<eval rand(100)+1>
+	
+	if (<local.parryChance> > <local.parryChanceRand>)
+		sound 42
+		argn1=0
+	endif
+endif
+
+if (<argn1> > 0)
+	local.id=<attacker.id <src>>
+	
+	if (<src.findlayer.2.type>==t_shield)
+		local.addThreat=<argn1>*2
+	else
+		local.addThreat=<argn1>
+	endif
+
+	attacker.<local.id>.threat+=<local.addThreat>
+endif

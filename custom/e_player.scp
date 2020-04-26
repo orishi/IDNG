@@ -1,0 +1,158 @@
+[events e_player]
+on=@login
+f_mysql_login
+sdialog d_emote
+account.resdisp=8
+
+if (<account.plevel> > 1)
+	privshow 0
+	gm 1
+endif
+
+if (<tag0.race>==0)
+	stone=1
+	dialog d_race_player
+endif
+
+argn2=1 //potlačí nějaké systémové hlášky při loginu
+src.serv.allclients sysmessage <src.name> je online
+
+on=@logout
+f_mysql_logout
+src.serv.allclients sysmessage <src.name> je offline
+
+on=@callguards
+return 1
+
+on=@death
+hits=1
+return 1
+
+on=@karmachange
+return 1
+
+on=@famechange
+return 1
+
+on=@userquestbutton
+sdialog d_emote
+return 1
+
+on=@userspecialmove
+return 1
+
+on=@userultimastorebutton
+return 1
+
+on=@uservirtue
+return 1
+
+on=@uservirtueinvoke
+return 1
+
+on=@itemdropon_ground
+if (<act.region.isevent.r_cleanup>)
+	argn1=30*60*10
+endif
+
+
+on=@itemequip
+if ((<act.type> == t_weapon_bow) || (<act.type> == t_weapon_xbow))
+	for 3 24
+		if !(<local._for> == 21) //skip backpack
+			if ((<findlayer.<local._for>.istevent.ei_armor_plate>) || (<findlayer.<local._for>.MageArmor>))
+				local.error ++
+			endif
+		endif
+	endfor
+endif
+
+if (((<act.type> == t_weapon_sword) || (<act.type> == t_weapon_mace_staff) || (<act.type> == t_wand) || (<act.type> == t_weapon_mace_crook) || (<act.type> == t_weapon_mace_pick) || (<act.type> == t_weapon_fence) || (<act.type> == t_weapon_mace_crook) || (<act.type> == t_weapon_mace_sharp)) && !((<act.dispid> == i_dagger) || (<act.dispid> == 0f52)))
+	for 3 24
+		if !(<local._for> == 21) //skip backpack
+			if (<findlayer.<local._for>.istevent.ei_armor_chain>)
+				local.error ++
+			endif
+		endif
+	endfor
+endif
+
+if ((<act.istevent.ei_armor_plate>) || (<act.MageArmor>))
+	for 1 2
+		if ((<findlayer.<local._for>.type>==t_weapon_bow) || (<findlayer.<local._for>.type>==t_weapon_xbow))
+			local.error ++
+		endif
+	endfor
+endif
+
+if (<local.error>)
+	sysmessage Nemůžeš použít tuto zbraň s touto zbrojí.
+	act.bounce
+	return 1
+endif
+
+on=@hittry
+if !(<argo.uid>)
+	local.weaponSkill=<eval <wrestling>/10>
+	local.weaponSpeed=60
+else
+	local.weaponSkill=<eval <<weapon.skill>>/10>
+	local.weaponSpeed=<argo.speed>
+endif
+
+if (<local.weaponSkill> < 10)
+	local.weaponSkill=10
+endif
+
+local.missChance=<eval rand(100)+1>
+if (<local.missChance> > <local.weaponSkill>)
+	actdiff=-1000
+else
+	actdiff=1000
+endif
+
+if (<dex> >= 100)
+	argn1=<eval 80-<local.weaponSpeed>>
+else
+	argn1=<eval 80-<local.weaponSpeed>-((100-<dex>)/2)>
+endif
+if (<argn1> < 10)
+	argn1=10
+endif
+
+on=@hit
+local.itemdamagechance=1
+
+if !(<argo.uid>)
+	local.weaponDamage=<eval <wrestling>/100>
+	local.weaponSkill=<eval <wrestling>/10>
+else
+	local.weaponDamage=<eval rand(<argo.dam>*5)>
+	local.weaponSkill=<eval <<weapon.skill>>/10>
+endif
+if (<eval <local.weaponSkill>> < 10)
+	local.weaponSkill=10
+endif
+
+local.damage=<eval (<local.weaponDamage>*<local.weaponSkill>)/100>
+local.damage=<eval ((<local.damage>*(100-<src.ar>))/100)>
+
+if (<local.damage> < 1)
+	local.damage=1
+endif
+
+argn1=<local.damage>
+argn2=<def.dam_god>
+
+on=@gethit
+local.itemdamagechance=1
+
+if (<findlayer.2.type>==t_shield)
+	local.parryChance=<eval (((<parrying>/10)*<findlayer.2.ar>)/100)>
+	local.parryChanceRand=<eval rand(100)+1>
+	
+	if (<local.parryChance> > <local.parryChanceRand>)
+		sound 42
+		argn1=0
+	endif
+endif

@@ -1,0 +1,219 @@
+[dialog d_emote]
+50,50
+
+page 0
+resizepic 0 0 5054 175 480
+//gumppictiled 10 10 155 380 2624
+//checkertrans 10 10 155 380
+
+button 10 200 4005 4006 1 0 100
+dcroppedtext 50 200 120 20 1000 Rozhlédnout se
+
+button 10 30 4005 4006 1 0 101
+dcroppedtext 50 30 120 20 1000 Zasmát se
+
+button 10 10 4005 4006 1 0 102
+dcroppedtext 50 10 120 20 1000 Zahihňat se
+
+button 10 100 4005 4006 1 0 103
+dcroppedtext 50 100 120 20 1000 Odkašlat si
+
+button 10 240 4005 4006 1 0 108
+dcroppedtext 50 240 120 20 1000 Zakašlat
+
+button 10 390 4005 4006 1 0 105
+dcroppedtext 50 390 120 20 1000 Lehnout si/Vstát
+
+button 10 320 4005 4006 1 0 106
+dcroppedtext 50 320 120 20 1000 Zavrtět hlavou
+
+button 10 220 4005 4006 1 0 107
+dcroppedtext 50 220 120 20 1000 Sehnout se
+
+button 10 450 4005 4006 1 0 104
+dcroppedtext 50 450 120 20 1000 Ukázat někam
+
+button 10 430 4005 4006 1 0 109
+dcroppedtext 50 430 120 20 1000 Shlédnout oblohu
+
+button 10 300 4005 4006 1 0 110
+dcroppedtext 50 300 120 20 1000 Zatleskat
+
+button 10 160 4005 4006 1 0 111
+dcroppedtext 50 160 120 20 1000 Přihlásit se
+
+button 10 370 4005 4006 1 0 112
+dcroppedtext 50 370 120 20 1000 Blíže prozkoumat
+
+button 10 410 4005 4006 1 0 113
+dcroppedtext 50 410 120 20 1000 Přičichnout si
+
+button 10 260 4005 4006 1 0 114
+dcroppedtext 50 260 120 20 1000 Zaklepat
+
+button 10 120 4005 4006 1 0 115
+dcroppedtext 50 120 120 20 1000 Plakat
+
+button 10 140 4005 4006 1 0 116
+dcroppedtext 50 140 120 20 1000 Poslat polibek
+
+button 10 60 4005 4006 1 0 117
+dcroppedtext 50 60 120 20 1000 Kýchnout
+
+button 10 340 4005 4006 1 0 118
+dcroppedtext 50 340 120 20 1000 Zívnout
+
+button 10 180 4005 4006 1 0 119
+dcroppedtext 50 180 120 20 1000 Pššššt
+
+button 10 80 4005 4006 1 0 120
+dcroppedtext 50 80 120 20 1000 Leknout se
+
+button 10 280 4005 4006 1 0 121
+dcroppedtext 50 280 120 20 1000 Zapískat
+
+[dialog d_emote button]
+on=100
+anim 5
+oemote rozhlíží se
+sdialog d_emote
+
+on=101
+sound <sex 1073/794>
+oemote směje se
+sdialog d_emote
+
+on=102
+sound <sex 1066/794>
+oemote hihňá se
+sdialog d_emote
+
+on=103
+sound <sex 1055/784>
+oemote <sex odkašlal/odkašlala> si
+sdialog d_emote
+
+on=104
+targetfg f_ukazat
+oemote ukazuje
+sdialog d_emote
+
+on=105
+//lehnout
+sdialog d_emote
+
+on=106
+anim 5
+oemote <sex zavrtěl/zavrtěla> hlavou
+sdialog d_emote
+
+on=107
+bow
+oemote <sex sehnul/sehnula> se
+sdialog d_emote
+
+on=108
+sound <sex 1056/784>
+oemote <sex zakašlal/zakašlala>
+sdialog d_emote
+
+on=109
+oemote dívá se vzhůru
+sdialog d_emote
+
+on=110
+sound <sex 1051/780>
+oemote <sex zatleskal/zatleskala>
+sdialog d_emote
+
+on=111
+oemote hlásí se
+sdialog d_emote
+
+on=112
+//prozkoumat
+sdialog d_emote
+
+on=113
+//přičichnout si
+sdialog d_emote
+
+on=114
+serv.newitem i_memory_kaslat
+new.equip
+oemote klepe
+sdialog d_emote
+
+on=115
+sound <sex 1058/787>
+oemote pláče
+sdialog d_emote
+
+on=116
+sound <sex 1072/800>
+oemote posílá polibek
+sdialog d_emote
+
+on=117
+sound <sex 1091/817>
+oemote kýchá
+sdialog d_emote
+
+on=118
+sound <sex 1096/822>
+oemote zívá
+sdialog d_emote
+
+on=119
+sound <sex 1089/815>
+oemote pššššt
+sdialog d_emote
+
+on=120
+sound <sex 1065/793>
+oemote <sex lekl/lekla> se
+sdialog d_emote
+
+on=121
+sound <sex 1095/821>
+oemote píská
+sdialog d_emote
+
+[itemdef i_memory_kaslat]
+defname=i_memory_kaslat
+id=i_memory
+type=t_eq_script
+
+on=@create
+timerd=1
+morex=0
+
+on=@timer
+if (<eval <morex>> < 3)
+	sound 933
+	morex=<eval <morex>+1>
+	timerd=2
+else
+	remove
+endif
+return 1
+
+[function f_ukazat]
+serv.newitem i_ukazat
+new.p=<targp>
+new.move 0 0 -2
+new.name=<name>
+new.oemote sem
+
+[itemdef i_ukazat]
+defname=i_ukazat
+id=i_gold
+
+on=@create
+attr=010
+color=1
+timer=2
+
+on=@timer
+remove
+return 1

@@ -1,0 +1,33 @@
+[itemdef i_moongate_custom]
+defname=i_moongate_custom
+id=i_moongate_red
+type=t_eq_script
+name=Moongate
+
+on=@create
+attr=010
+morex=0
+timer=-1
+
+on=@timer
+morex=0
+return 1
+
+on=@step
+if (<morex>==0)
+	dorand 5
+		src.go 1336,1997,5,0=mg_britain
+		//src.go 1499,3771,5,0=mg_jhelom
+		src.go 771,752,5,0=mg_yew
+		src.go 2701,692,5,0=mg_minoc
+		src.go 1828,2948,-20,0=mg_trinsic
+		src.go 643,2067,5,0=mg_skara_brae
+		//src.go 3563,2139,34,0=mg_magincia
+		//src.go 4467,1283,5,0=mg_moonglow
+		//src.go 2711,2234,0,0=mg_buccaneers_den
+	enddo
+	forinstances i_moongate_custom
+		morex=1
+		timer=5
+	endfor
+endif

@@ -1,0 +1,32 @@
+[typedef t_door]
+on=@dclick
+timerf 1,f_door_donotclose
+
+if (<link>)
+	link.timerf 1,f_door_donotclose
+endif
+
+[function f_door_donotclose]
+timer=-1
+
+[typedef t_door_locked]
+on=@dclick
+timerf 1,f_door_donotclose
+
+if (<link>)
+	link.timerf 1,f_door_donotclose
+endif
+
+local.has_key=0
+local.zamek=<more1>
+forcont <src.findlayer.21.uid>
+    if ((<more1> == <local.zamek>) && (<type>==t_key))
+        local.has_key=1
+    endif
+endfor
+
+if (<eval <local.has_key>>==0)
+	src.message Je zamčeno.
+else
+	src.message Rychle jsi odemkl, otevřel a zamkl dveře.
+endif

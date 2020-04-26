@@ -1,0 +1,3 @@
+[regiontype r_cleanup]
+on=@enter
+src.sysmessage Upozornění: předměty položené na zem v této lokaci (<region.name>) zmizí za 30 minut.

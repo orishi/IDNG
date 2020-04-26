@@ -1,0 +1,22 @@
+[typedef t_porttrh1]
+on=@step
+if (<src.isplayer>)
+	if ((<src.ctag0.porttrh> >= <serv.time>) || (<src.tag0.porttrh_p> > 0))
+		src.sysmessage Musíš chvíli počkat.
+	else
+		src.tag.porttrh_p=<p>
+		src.ctag.lastdclick=<eval <serv.time> + 100> //10 vteřin
+		src.go 4572,2406,-2
+	endif
+endif
+
+[typedef t_porttrh2]
+on=@step
+if (<src.isplayer>)
+	src.ctag.lastdclick=<eval <serv.time> + 100>
+	src.go <src.tag0.porttrh_p>
+	src.timerf 10,f_porttrh_remove
+ENDIF
+
+[function f_porttrh_remove]
+tag.porttrh_p=

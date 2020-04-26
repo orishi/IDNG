@@ -1,0 +1,253 @@
+[itemdef i_mount_spawn]
+defname=i_mount_spawn
+type=t_eq_script
+id=0edc
+name=Random mount spawn
+weight=100
+
+category=Provisions - GM Items
+subsection=Spawner
+description=Random mount spawn
+
+on=@create
+attr=attr_move_never|attr_invis
+timer=1
+
+on=@dclick
+timer=1
+message Resetuji timer.
+message Max počet: <eval <morex>>
+message Aktuální počet: <check_random_mounts>
+return 1
+
+on=@timer
+if (<check_random_mounts> < <morex>)
+	dorand 7
+		serv.newnpc c_horse_tan
+		serv.newnpc c_horse_brown_lt
+		serv.newnpc c_horse_brown_dk
+		serv.newnpc c_horse_gray
+		serv.newnpc c_llama
+		serv.newnpc c_llama_pack
+		serv.newnpc c_horse_pack
+	enddo
+	new.send_anywhere_mount
+	new.tag.random_spawned.mount=1
+	timer=<eval rand(21000,22000)>
+else
+	timer=900
+endif
+return 1
+
+[itemdef i_animal_spawn]
+defname=i_animal_spawn
+type=t_eq_script
+id=0edc
+name=Random animal spawn
+weight=100
+
+category=Provisions - GM Items
+subsection=Spawner
+description=Random animal spawn
+
+on=@create
+attr=attr_move_never|attr_invis
+timer=1
+
+on=@dclick
+timer=1
+message Resetuji timer. 
+message Max počet: <eval <morex>>
+message Aktuální počet: <check_random_animals>
+return 1
+
+on=@timer
+if (<check_random_animals> < <morex>)
+	dorand 48
+		serv.newnpc c_bear_black
+		serv.newnpc c_bear_brown
+		serv.newnpc c_bear_grizzly
+		serv.newnpc c_bull_brown_dk
+		serv.newnpc c_bull_brown_lt
+		serv.newnpc c_cat
+		serv.newnpc c_chicken
+		serv.newnpc c_cougar
+		serv.newnpc c_cow_brown
+		serv.newnpc c_cow_bw
+		serv.newnpc c_doe
+		serv.newnpc c_doe
+		serv.newnpc c_doe
+		serv.newnpc c_doe
+		serv.newnpc c_dog
+		serv.newnpc c_eagle
+		serv.newnpc c_ferret
+		serv.newnpc c_goat
+		serv.newnpc c_gorilla
+		serv.newnpc c_leopard
+		serv.newnpc c_panther
+		serv.newnpc c_pig
+		serv.newnpc c_pig_big
+		serv.newnpc c_rabbit
+		serv.newnpc c_rat
+		serv.newnpc c_rat_giant
+		serv.newnpc c_sheep_woolly
+		serv.newnpc c_snake
+		serv.newnpc c_squirrel
+		serv.newnpc c_stag
+		serv.newnpc c_stag
+		serv.newnpc c_stag
+		serv.newnpc c_wolf_dark
+		serv.newnpc c_wolf_dire
+		serv.newnpc c_wolf_grey
+		serv.newnpc c_wolf_silver
+		serv.newnpc c_wolf_timber
+		serv.newnpc c_wolf_white
+		serv.newnpc c_bird
+		serv.newnpc c_eagle
+		serv.newnpc c_eagle
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+		serv.newnpc c_bird
+	enddo
+	new.send_anywhere_animal
+	new.tag.random_spawned.animal=1
+	timer=1
+else
+	timer=60
+endif
+return 1
+
+[function send_anywhere_animal]
+local.is_a_valid_place=0
+
+while !(<local.is_a_valid_place>)
+  local.random_x=<eval rand(0,5115)>
+  local.random_y=<eval rand(0,4095)>
+
+  if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).isneartype t_water 2>==0) //vynechat vodu
+  	if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).isneartype t_rock 2>==0) //vynechat skaly
+  		if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).isneartype t_grass 2>==1) //ano, chceme travu
+  			if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).statics>==0) //ne na static
+  				if !((<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).region.flags>&region_flag_nobuilding) || (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).region.flags>&region_flag_guarded) || (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).region.flags>&region_flag_ship))
+					p=<eval <local.random_x>>,<eval <local.random_y>>,0,0
+					home=<p>
+					homedist=20
+					if (<check_nearby_spawned_animal>==0)
+						local.is_a_valid_place=1
+						//serv.log NPC spawner: spawned <baseid> (<uid>) <p>	
+					else
+						local.is_a_valid_place=0
+					endif
+					f_fix_z
+  				endif
+  			endif
+  		endif
+  	endif
+  endif
+endwhile
+
+local.is_a_valid_place=
+local.random_x=
+local.random_y=
+
+[function send_anywhere_mount]
+local.is_a_valid_place=0
+
+while !(<local.is_a_valid_place>)
+  local.random_x=<eval rand(0,5115)>
+  local.random_y=<eval rand(0,4095)>
+
+  if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).isneartype t_water 2>==0) //vynechat vodu
+  	if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).isneartype t_rock 2>==0) //vynechat skaly
+  		if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).isneartype t_grass 2>==1) //ano, chceme travu
+  			if (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).statics>==0) //ne na static
+  				if !((<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).region.flags>&region_flag_nobuilding) || (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).region.flags>&region_flag_guarded) || (<serv.map(<eval <local.random_x>>,<eval <local.random_y>>,0,0).region.flags>&region_flag_ship))
+					p=<eval <local.random_x>>,<eval <local.random_y>>,0,0
+					home=<p>
+					homedist=20
+					if (<check_nearby_spawned_mounts>==0)
+						local.is_a_valid_place=1
+						serv.log Mount spawner: spawned <baseid> (<uid>) <p>	
+					else
+						local.is_a_valid_place=0
+					endif
+					f_fix_z
+  				endif
+  			endif
+  		endif
+  	endif
+  endif
+endwhile
+
+local.is_a_valid_place=
+local.random_x=
+local.random_y=
+
+[function f_fix_z]
+local.z = <z>
+local.tz = <serv.map(<p.x>,<p.y>).terrain.z>
+
+if (<eval abs(<local.z> - <local.tz>)> < 10)
+    z <local.tz>
+else
+    local.z <local.tz>
+    for x 1 <serv.map(<p.x>,<p.y>).statics>
+        if (<eval abs(<local.z> - <serv.map(<p.x>,<p.y>).statics.<local.x>.z>)> < 10)
+            local.z <serv.map(<p.x>,<p.y>).statics.<local.x>.z>
+        endif
+    endfor
+
+    z <local.z>
+endif
+
+[function check_random_animals]
+forchars 6144
+	if (<tag0.random_spawned.animal> == 1)
+		local.pocet ++
+	endif
+endfor
+return <local.pocet>
+
+[function check_random_mounts]
+forchars 6144
+	if (<tag0.random_spawned.mount> == 1)
+		local.pocet ++
+	endif
+endfor
+return <local.pocet>
+
+[function check_nearby_spawned_animal]
+forchars 10
+	if (<tag0.random_spawned.animal> == 1)
+		local.error ++
+	endif
+endfor
+if (<local.error>)
+	return 1
+else
+	return 0
+endif
+
+[function check_nearby_spawned_mounts]
+forchars 100
+	if ((<tag0.random_spawned.mount> == 1)
+		local.error ++
+	endif
+endfor
+if (<local.error>)
+	return 1
+else
+	return 0
+endif
+
+[function delete_all_random_spawned]
+forchars 6144
+	if ((<tag0.random_spawned.animal>==1) || (<tag0.random_spawned.mount>==1))
+		remove
+	endif
+endfor

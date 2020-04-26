@@ -1,0 +1,17 @@
+[typedef ei_item]
+on=@dclick
+if (<src.isplayer>)
+	if (<src.account.plevel>==1)
+		if (<src.ctag0.lastdclick> >= <serv.time>)
+		   src.sysmessage <defmsg.skillwait_3>
+		   return 1
+		else
+			src.ctag.lastdclick=<eval <serv.time> + 5>
+		endif
+	endif
+endif
+
+on=@create
+if ((<type>==t_clothing) && (<hitpoints> <= 1))
+	hitpoints=50
+endif

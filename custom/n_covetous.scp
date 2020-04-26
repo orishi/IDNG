@@ -1,0 +1,546 @@
+//--------------------------------------------
+//-------------covetous dungeon---------------
+//--------------------------------------------
+
+[CHARDEF c_master_orc]
+DEFNAME=c_orc_master
+ID=c_orc_lord
+NAME=#NAMES_ORC the Orc
+DAM=25,30
+ARMOR=140
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Master Orc
+
+ON=@Create
+COLOR=2904
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={496 520}
+DEX={581 605}
+INT={150 170}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={150.0 170.0}
+
+ON=@NPCRestock
+ITEM=i_gold (50 150)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+[CHARDEF c_master_orc_krev]
+DEFNAME=c_orc_master_krev
+ID=c_orc_lord
+NAME=#NAMES_ORC the Orc
+DAM=25,30
+ARMOR=140
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Master Orc Krev
+
+ON=@Create
+COLOR=2904
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={496 520}
+DEX={581 605}
+INT={150 170}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={150.0 170.0}
+
+ON=@NPCRestock
+ITEM=i_gold (50 150)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+ON=@DEATH
+serv.newitem i_bottle_krev
+new.bounce
+
+[CHARDEF c_master_orc_kost1]
+DEFNAME=c_master_orc_kost1
+ID=c_orc_lord
+NAME=#NAMES_ORC the Orc
+DAM=25,30
+ARMOR=140
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Master Orc Kost 1
+
+ON=@Create
+COLOR=2904
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={496 520}
+DEX={581 605}
+INT={150 170}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={150.0 170.0}
+
+ON=@NPCRestock
+ITEM=i_gold (50 150)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+ON=@DEATH
+serv.newitem i_master_orc_kost1
+new.bounce
+
+[CHARDEF c_master_orc_kost2]
+DEFNAME=c_master_orc_kost2
+ID=c_orc_lord
+NAME=#NAMES_ORC the Orc
+DAM=25,30
+ARMOR=140
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Master Orc Kost 2
+
+ON=@Create
+COLOR=2904
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={496 520}
+DEX={581 605}
+INT={150 170}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={150.0 170.0}
+
+ON=@NPCRestock
+ITEM=i_gold (50 150)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+ON=@DEATH
+serv.newitem i_master_orc_kost2
+new.bounce
+
+[CHARDEF c_master_orc_kost3]
+DEFNAME=c_master_orc_kost3
+ID=c_orc_lord
+NAME=#NAMES_ORC the Orc
+DAM=25,30
+ARMOR=140
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Master Orc Kost 3
+
+ON=@Create
+COLOR=2904
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={496 520}
+DEX={581 605}
+INT={150 170}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={150.0 170.0}
+
+ON=@NPCRestock
+ITEM=i_gold (50 150)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+ON=@DEATH
+serv.newitem i_master_orc_kost3
+new.bounce
+
+[itemdef i_master_orc_kost1]
+defname=i_master_orc_kost1
+name=Orc ribcage
+id=i_bone_ribcage
+type=t_normal
+
+category=Dungeons
+subsection=Covetous
+description=Kost 1
+
+on=@create
+timer=3600
+
+on=@timer
+remove
+update
+return 1
+
+[itemdef i_master_orc_kost2]
+defname=i_master_orc_kost2
+name=Orc spine
+id=i_bone_spine
+type=t_normal
+
+category=Dungeons
+subsection=Covetous
+description=Kost 2
+
+on=@create
+timer=3600
+
+on=@timer
+remove
+update
+return 1
+
+[itemdef i_master_orc_kost3]
+defname=i_master_orc_kost3
+name=Orc skull
+id=i_bone_skull
+type=t_normal
+
+category=Dungeons
+subsection=Covetous
+description=Kost 3
+
+on=@create
+timer=3600
+
+on=@timer
+remove
+update
+return 1
+
+[itemdef i_master_orc_coffin]
+defname=i_master_orc_coffin
+name=Truhla na ostatky
+id=i_box_wood
+
+category=Dungeons
+subsection=Covetous
+description=Truhla na kosti
+
+on=@create
+attr=08010
+
+on=@dclick
+if ((<restest i_master_orc_kost1>) && (<restest i_master_orc_kost2>) && (<restest i_master_orc_kost3>))
+	consume i_master_orc_kost1
+	consume i_master_orc_kost2
+	consume i_master_orc_kost3
+	empty
+	src.sysmessage Ozval se velmi podivny zvuk.
+	serv.newitem i_master_orc_port
+	new.p=5450,1800
+	new.update
+else
+	src.sysmessage Vlož ostatky do truhly a znovu ji otevři.
+endif
+
+[itemdef i_master_orc_port]
+defname=i_master_orc_port
+id=i_rune_alchem_2
+type=t_eq_script
+
+on=@create
+color=0b62
+attr=08010
+timer=30
+
+on=@timer
+remove
+return 1
+
+on=@step
+src.go 5417,1810
+
+[CHARDEF c_ghost_orc]
+DEFNAME=c_orc_ghost
+ID=c_orc
+NAME=#NAMES_ORC the Orc
+DAM=9,25
+ARMOR=90
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Ghost Orc
+
+ON=@Create
+COLOR=2908
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={296 320}
+DEX={181 205}
+INT={36 60}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={90.0 95.0}
+
+ON=@NPCRestock
+ITEM=i_gold (40 50)
+
+[CHARDEF c_assasin_orc]
+DEFNAME=c_orc_assasin
+ID=c_orc
+NAME=#NAMES_ORC the Orc
+DAM=7,25
+ARMOR=140
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Assasin Orc
+
+ON=@Create
+COLOR=2922
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={396 420}
+DEX={281 305}
+INT={36 60}
+
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={50.0 75.0}
+TACTICS={95.0 100.0}
+WRESTLING={90.0 95.0}
+HIDING={90.0 95.0}
+
+ON=@NPCRestock
+ITEM=i_gold (50 80)
+
+[CHARDEF c_elder_orc]
+DEFNAME=c_orc_elder
+NAME=Elder Orc
+ID=c_orc_lord
+DAM=1,3
+ARMOR=200
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+ON=@Create
+COLOR=2913
+STR={2010 2145}
+DEX={400 535}
+INT={286 310}
+
+SWORDSMANSHIP={90.0 95.0}
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={90.0 95.0}
+TACTICS={95.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-2000 -2999}
+
+ON=@NPCRestock
+ITEM=i_gold (100 200)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Elder Orc
+
+[CHARDEF c_elder_orc_svitek]
+DEFNAME=c_orc_elder_svitek
+NAME=Elder Orc
+ID=c_orc_lord
+DAM=1,3
+ARMOR=200
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+ON=@Create
+COLOR=2913
+STR={2010 2145}
+DEX={400 535}
+INT={286 310}
+
+SWORDSMANSHIP={90.0 95.0}
+PARRYING={90.0 95.0}
+MAGICRESISTANCE={90.0 95.0}
+TACTICS={95.0 100.0}
+
+NPC=brain_monster
+
+FAME={100 2000}
+KARMA={-2000 -2999}
+
+ON=@NPCRestock
+ITEM=i_gold (100 200)
+
+ON=@SPELLEFFECT
+IF (<argn> == 57)
+	return 1
+ENDIF
+return 0
+
+ON=@DEATH
+serv.newitem i_m_harm_scroll
+new.bounce
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Elder Orc Svitek
+
+[CHARDEF c_whelp_orc]
+DEFNAME=c_orc_whelp
+ID=c_orc
+NAME=#NAMES_ORC the Orc
+DAM=3,10
+ARMOR=60
+CAN=MT_WALK|MT_RUN|MT_USEHANDS|MT_EQUIP
+RESOURCES=8 i_ribs_raw
+FOODTYPE=15 t_meat_raw
+DESIRES=i_gold,spk_orc
+TSPEECH=spk_orc
+
+CATEGORY=Monsters
+SUBSECTION=Orcs
+DESCRIPTION=Covetous - Whelp Orc
+
+ON=@Create
+NPC=brain_monster
+FAME={100 1000}
+KARMA={-1000 -5000}
+STR={56 70}
+DEX={51 65}
+INT={26 30}
+
+PARRYING={20.0 35.0}
+MAGICRESISTANCE={10.0 15.0}
+TACTICS={25.0 30.0}
+WRESTLING={30.0 40.0}
+
+ON=@NPCRestock
+ITEM=i_gold (20 40)
+
+[CHARDEF c_m_balron_svitek]
+DEFNAME=c_m_balron_svitek
+NAME=Balron
+ID=c_daemon_balron
+DAM=17,43
+ARMOR=70
+
+//ALIGNMENT=EVIL
+CAN=MT_WALK|MT_FLY
+//SPELLCIRCLES=6,8
+DESIRES=c_DAEMON,i_gold,t_wand
+AVERSIONS=r_water,r_mountains
+
+ON=@Create
+KARMA=-12000
+
+STR={985 1185}
+DEX={175 255}
+INT={15 25}
+
+PARRYING={90.0 100.0}
+MAGERY={90.0 100.0}
+MAGICRESISTANCE={90.0 100.0}
+TACTICS={90.0 100.0}
+WRESTLING={90.0 100.0}
+PROVOCATION={95.0 105.0}
+
+NPC=brain_monster
+
+FAME={4000 8000}
+KARMA={-6000 -6999}
+
+ON=@NPCRestock
+ITEM=random_potion
+ITEM=random_potion
+ITEM=random_magic_wands,R3
+ITEM=i_gold,{800 1200}
+ITEM={ random_rich_magic_loot 1 random_average_magic_loot 1 },R300
+
+on=@death
+serv.newitem i_m_bless_scroll
+new.bounce
+
+CATEGORY=Monsters
+SUBSECTION=Daemons
+DESCRIPTION=Covetous - Balron svitek
+
+
+[eof]

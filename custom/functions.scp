@@ -1,0 +1,241 @@
+﻿[function sql_requibld]
+f_add_rebuild
+
+[function f_mysql_date]
+return <serv.rtime.format %Y/%m/%d %H:%M:%S>
+
+[function f_mysql_logout]
+db.execute "UPDATE idng.account SET age='<account.totalconnecttime>', online='0', last_online='<f_mysql_date>' WHERE account='<account>'"
+db.execute "UPDATE idng.character SET online='0', last_online='<f_mysql_date>' WHERE uid='<uid>'"
+
+[function f_mysql_login]
+db.execute "UPDATE idng.account SET online='1' WHERE account='<account>'"
+db.execute "UPDATE idng.character SET online='1', last_online='<f_mysql_date>' WHERE uid='<uid>'"
+
+[function getargvx]
+if <argv[0]> == -1
+ return <eval <argv>-1>
+else
+ return <argv[<argv[0]>]>
+endif 
+
+[function mtele]
+if !<args>
+	targetfg mtele 1
+else
+	go <targp>
+	targetfg mtele 1
+endif
+
+[function mmove]
+if !<args>
+	targetf mmove 1
+else
+	if !<argv[1]>
+		try uid.<argo.uid>.say @0480@ .
+		targetfg mmove 1,<argo.uid>
+	else
+		try uid.<argv[1]>.p <targp>
+		try uid.<argv[1]>.update
+		targetf mmove 1
+	endif
+endif
+
+[function mremove]
+if !<args>
+	targetf mremove 1
+else
+	if (<uid.<argo.uid>.isitem>)
+		try uid.<argo.uid>.remove
+	endif
+	targetf mremove 1
+endif
+
+[function stopfollow]
+consume i_eq_followsrc
+
+[function delete]
+if !<args>
+	targetf delete 1
+else
+	try uid.<argo.uid>.remove
+endif
+
+[function props]
+if !<args>
+	targetf props 1
+else
+	try uid.<argo.uid>.info
+endif
+
+[function b]
+if (<isempty <argv[0]>>)
+	src.sysmessage Musíš zadat ".b text zprávy" - zpráva se zobrazí všem hráčům na serveru.
+	return 1
+endif
+src.serv.allclients sysmessage Zpráva od RT (<src.name>): <args>
+
+[function c]
+if (<isempty <argv[0]>>)
+	sysmessage Musíš zadat ".c text zprávy" - zpráva se zobrazí všem online PT/RT/adminům.
+	return 1
+endif
+serv.allclients f_c,<uid>,<args>
+
+[function f_c]
+if (<account.plevel> > 1)
+    ref1=<argv0>
+    local.color=<ref1.speechcolor>
+    local.sender=<ref1.name>
+    args=<streat <args>>
+    sysmessage @<local.color> [<local.sender>]: <args>
+endif
+
+[function lock]
+if !<args>
+	sysmessage Co chceš zamknout (bez klíče)?
+	targetf lock 1
+else
+	obj=<argo.uid>
+	if (<obj.type>==t_door)
+		obj.type=t_door_locked
+		obj.more2=1000
+		sysmessage Zamčeno.
+	elseif (<obj.type>==t_container)
+		obj.type=t_container_locked
+		obj.more2=1000
+		sysmessage Zamčeno.
+	else
+		sysmessage Toto nelze zamknout.
+	endif
+endif
+
+[function lockkey]
+if !<args>
+	sysmessage Co chceš zamknout na klíč?
+	targetf lockkey 1
+else
+	obj=<argo.uid>
+	if (<obj.type>==t_door)
+		serv.newitem i_key_copper
+		new.more1=<obj.uid>
+		obj.more1=<obj.uid>
+		obj.more2=1000
+		new.bounce
+		obj.type=t_door_locked
+		sysmessage Zamčeno. Klíč máš v batohu.
+	elseif (<obj.type>==t_container)
+		serv.newitem i_key_copper
+		new.more1=<obj.uid>
+		obj.more1=<obj.uid>
+		obj.more2=1000
+		new.bounce
+		obj.type=t_container_locked
+		sysmessage Zamčeno. Klíč máš v batohu.
+	else
+		sysmessage Toto nelze zamknout.
+	endif
+endif
+
+[function lockperson]
+
+[function unlock]
+if !<args>
+	sysmessage Co chceš odemknout?
+	targetf unlock 1
+else
+	obj=<argo.uid>
+	if (<obj.type>==t_door_locked)
+		obj.type=t_door
+		sysmessage Odemčeno.
+	elseif (<obj.type>==t_container_locked)
+		obj.type=t_container
+		sysmessage Odemčeno.
+	else
+		sysmessage Toto nelze odemknout.
+	endif
+endif
+
+[function otoc]
+if !<args>
+	sysmessage <defmsg.target_promt>
+	targetf otoc 1
+else
+	obj=<argo.uid>
+	if (<obj.type>==t_letax_krb)
+		sysmessage Latexové krby nelze otáčet.
+		return 1
+	endif
+	if ((<obj.distance> <= 1) && (<account.plevel>==1))
+		try uid.<argo.uid>.flip
+	else
+		sysmessage <defmsg.itemuse_toofar>
+	endif
+endif
+
+[function r]
+if (<account.plevel >= 7)
+	serv.resync
+endif
+
+[function oemote]
+sayua 026,2,0,1 *<args>*
+
+[function osay]
+sayua <speechcolor>,0,0,1 <args>
+
+[function ocontrol]
+sysmessage Koho chceš ovládat?
+targetf f_ocontrol
+
+[function f_ocontrol]
+obj = <argo.uid>
+
+if (<obj.npc>)
+	obj.control
+	shrink 1
+endif
+
+[typedef t_figurine]
+on=@dclick
+obj=<more2>
+obj.invis=1
+obj.invul=0
+src.timerf 1,f_unshrink,<more2>
+
+[function f_unshrink]
+obj=<args>
+obj.control
+
+[function addtopack]
+args=<qval <isnum <args>> ? <resdef.<serv.itemdef.<resourceindex <args>>.defname>> : <resdef.<args>>>
+if (!<isempty <args>> && <serv.itemdef.<dargs>>)
+ addtopack_ <args>
+ return 1
+endif
+sysmessage <defmsg.cmd_invalid>
+
+[function addtopack_]
+serv.newitem <args>
+new.cont=<src.findlayer.21.uid>
+act=<new>
+act.update
+
+[function set_pet_movedelay]
+if !<args>
+	local.speed=200
+else
+	local.speed=<args>
+endif
+tag.override.movedelay=<local.speed>
+
+[function unset_pet_movedelay]
+tag.override.movedelay=
+
+[function respawn_all]
+forinstances i_worldgem_bit
+	if (<type>==t_spawn_char) //ne itemy
+		reset
+		start
+	endif
+endfor

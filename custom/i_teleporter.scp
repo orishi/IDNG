@@ -1,0 +1,112 @@
+[itemdef i_telepad]
+defname=i_telepad
+id=7107
+name=Telepad
+type=t_telepad
+category=GM Items
+subsection=Teleportery
+description=Telepad
+
+on=@create
+attr=090
+more1=1 //only players and pets
+more2=1 //no anim/sound
+
+on=@dclick
+src.sysmessage Přes příkaz ".set morep xxxx,yyyy,zz" nastav požadované souřadnice. Nebo přes ".info".
+return 1
+
+[itemdef i_telepad_clovek]
+defname=i_telepad_clovek
+id=7107
+name=Telepad (clovek)
+type=t_telepad
+category=GM Items
+subsection=Teleportery
+description=Telepad (clovek)
+
+on=@create
+attr=090
+more1=1 //only players and pets
+more2=1 //no anim/sound
+
+on=@dclick
+src.sysmessage Přes příkaz ".set morep xxxx,yyyy,zz" nastav požadované souřadnice. Nebo přes ".info".
+return 1
+
+on=@step
+if !(<src.isgm>)
+	if !(<src.tag0.race>==1)
+		return 1
+	endif
+endif
+
+[itemdef i_telepad_trpaslik]
+defname=i_telepad_trpaslik
+id=7107
+name=Telepad (trpaslik)
+type=t_telepad
+category=GM Items
+subsection=Teleportery
+description=Telepad (trpaslik)
+
+on=@create
+attr=090
+more1=1 //only players and pets
+more2=1 //no anim/sound
+
+on=@dclick
+src.sysmessage Přes příkaz ".set morep xxxx,yyyy,zz" nastav požadované souřadnice. Nebo přes ".info".
+return 1
+
+on=@step
+if !(<src.isgm>)
+	if !(<src.tag0.race>==2)
+		return 1
+	endif
+endif
+
+[itemdef i_telepad_elf]
+defname=i_telepad_elf
+id=7107
+name=Telepad (elf)
+type=t_telepad
+category=GM Items
+subsection=Teleportery
+description=Telepad (elf)
+
+on=@create
+attr=090
+more1=1 //only players and pets
+more2=1 //no anim/sound
+
+on=@dclick
+src.sysmessage Přes příkaz ".set morep xxxx,yyyy,zz" nastav požadované souřadnice. Nebo přes ".info".
+return 1
+
+on=@step
+if !(<src.isgm>)
+	if !(<src.tag0.race>==3)
+		return 1
+	endif
+endif
+
+[itemdef i_blocker]
+defname=i_blocker
+id=2519
+name=Blocker
+type=t_normal
+category=GM Items
+subsection=Blockery
+description=Blocker (nelze projit)
+
+on=@create
+attr=090
+color=020
+
+on=@dclick
+src.sysmessage Přes tento blok nelze projít.
+return 1
+
+on=@step
+return 1
