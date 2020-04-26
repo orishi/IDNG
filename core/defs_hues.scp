@@ -22,13 +22,6 @@ color_hide_spined            08ac	//pre-AOS: 0283
 color_hide_horned            0845	//pre-AOS: 0227
 color_hide_barbed            0851	//pre-AOS: 01c1
 
-color_log_oak                07da
-color_log_ash                04a7
-color_log_yew                04a8
-color_log_heartwood          04a9
-color_log_bloodwood          04aa
-color_log_frostwood          047f
-
 color_dragonscale_red        066d
 color_dragonscale_yellow     08a8
 color_dragonscale_black      0455
@@ -47,14 +40,18 @@ color_magic_hardening        0
 color_magic_fortification    0
 color_magic_invulnerability  0
 
+color_deadric 	2926
+
 [DEFNAME hues_range]
 colors_all             {2 1001}
 colors_skin            {1002 1058}
-colors_skin_elf        {0bf 1 {024d 024f} 1 0353 1 0361 1 0367 1 {0374 0376} 1 {0381 0385} 1 0389 1 03de 1 {03e5 03e6} 1 {03e8 03e9} 1 0430 1 04a7 1 04de 1 051d 1 053f 1 0579 1 {076b 076d} 1 0835 1 0903 1}
+colors_skin_dwarf      {1139 1 1137 1 1136 1 1135 1 1130 1 1129 1 1542 1 1534 1}
+colors_skin_elf        {2419 1 {741 761} 1}
 colors_skin_gargoyle   {1755 1779}
 colors_hair            {1102 1149}
-colors_hair_elf        {{034 039} 1 058 1 {08e 08f} 1 {090 092} 1 0101 1 {0159 015e} 1 0128 1 012f 1 01bd 1 01e4 1 01f3 1 0207 1 0211 1 0239 1 0251 1 026c 1 02c3 1 02c9 1 {031d 0326} 1 0369 1 {0386 038a} 1 059d 1 06b8 1 0725 1 0853 1}
+colors_hair_elf        {{2419 2421} 1 {1437 1438} 1}
 colors_hair_gargoyle   {06e0 1 06e2 1 06e4 1 06ef 1 06f1 1 06f3 1 0709 1 070b 1 070d 1 070f 1 0711 1 0763 1 0765 1 0768 1 076b 1}
+colors_hair_dwarf      {1118 1149}
 colors_pink            {1201 1254}
 colors_blue            {1301 1354}
 colors_green           {1401 1454}

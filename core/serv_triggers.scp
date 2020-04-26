@@ -25,6 +25,7 @@ f_onserver_save_fail
 f_onserver_save_finished
 f_onserver_blockip
 f_onserver_timer
+f_add_rebuild
 
 [FUNCTION f_axis_preload]
 // This function is called every time someone connects from Axis to retrieve information.
@@ -36,7 +37,6 @@ f_onserver_timer
 //	1 --> Deny access and send deny message
 //	2 --> Allow access (default action)
 
-
 [FUNCTION f_onaccount_connect]
 // This function is called when an client connect on server, before password checks.
 // Variables:
@@ -46,7 +46,6 @@ f_onserver_timer
 //	0 --> Use internal password checks (default action)
 //	1 --> Disconnect client assuming the given password is wrong
 //	6 --> Skip internal password checks (password checks must be done manually on scripts)
-
 
 [FUNCTION f_onaccount_login]
 // This function is called after client entered correct password.
@@ -58,7 +57,8 @@ f_onserver_timer
 // Return:
 //	0 --> Allow connection (default action)
 //	1 --> Deny connection
-
+db.query "UPDATE idng.account SET password='<serv.account.<args>.password>', ip_last='<serv.account.<args>.lastip>', last_online='<f_mysql_date>', plevel=<serv.account.<args>.plevel> WHERE account = '<args>'"
+db.query "INSERT INTO idng.account_ip (account, ip) VALUES ('<args>', '<serv.account.<args>.lastip>')"
 
 [FUNCTION f_onaccount_create]
 // This function is called before an account get created.
@@ -67,7 +67,7 @@ f_onserver_timer
 // Return:
 //	0 --> Allow account creation (default action)
 //	1 --> Deny account creation
-
+db.query "INSERT INTO idng.account (account) VALUES ('<args>')"
 
 [FUNCTION f_onaccount_delete]
 // This function is called before an account get deleted.
@@ -76,7 +76,7 @@ f_onserver_timer
 // RETURN
 //	0 --> Allow account deletion (default action)
 //	1 --> Deny account deletion
-
+db.query "DELETE FROM idng.account WHERE account='<args>'"
 
 [FUNCTION f_onaccount_pwchange]
 // This function is called when an account password is being changed.
@@ -87,7 +87,7 @@ f_onserver_timer
 // Return:
 //	0 --> Allow password change (default action)
 //	1 --> Deny password change
-
+db.query "UPDATE idng.account SET password='<local.password>' WHERE account = '<args>'"
 
 [FUNCTION f_onchar_create_init]
 // This function is called before an account character is created.
@@ -102,7 +102,9 @@ f_onserver_timer
 // Return:
 //	0 --> Allow character creation (default action)
 //	1 --> Deny character creation
-
+if (<argn3> > 1) //clovek
+	return 1
+endif
 
 [FUNCTION f_onchar_create]
 // This function is called after an account character got created.
@@ -117,8 +119,10 @@ f_onserver_timer
 //	0 --> Allow character creation (default action)
 //	1 --> Deny character creation
 
-//f_meditation_setup	//Uncomment this line to enable passive meditation (more info on sphere_skills.scp)
+f_meditation_setup	//Uncomment this line to enable passive meditation (more info on sphere_skills.scp)
 
+db.query "INSERT INTO idng.character (uid, account, name) VALUES ('<src.uid>', '<args>', '<src.name>')"
+src.title=Clovek
 
 [FUNCTION f_onchar_delete]
 // This function is called before an account character got deleted.
@@ -128,18 +132,33 @@ f_onserver_timer
 // Return:
 //	0 --> Allow character deletion (default action)
 //	1 --> Deny character deletion
-
+db.query "DELETE FROM idng.character WHERE uid='<src.uid>'"
 
 [FUNCTION f_onserver_start]
 // This function is called on server startup.
 
 //SERV.ServIP=xxx.xxx.xxx.xxx	//Add your public IP here (not domain) if you are behind a router
 f_DTL_mdb_update 		// Load into MDB (in-memory database) the database file used for the loot dynamic templates
+//f_add_rebuild
 
+if <serv.MySQL> == 1
+db.connect
+    if <db.connected>
+    serv.log @MySQL: Connected Succesfully!
+    else
+    serv.log @MySQL: Failed to Connect!
+    endif
+endif
+
+db.execute "UPDATE idng.account SET online=0"
+db.execute "UPDATE idng.character SET online=0"
+
+f_change_light1 <serv.rtime.format %H>
 
 [FUNCTION f_onserver_exit]
 // This function is called on server shutdown.
-
+db.execute "UPDATE idng.account SET online=0"
+db.execute "UPDATE idng.character SET online=0"
 
 [FUNCTION f_onserver_save]
 // This function is called before server worldsave start.
@@ -150,8 +169,7 @@ f_DTL_mdb_update 		// Load into MDB (in-memory database) the database file used 
 //	0 --> Allow save (default action)
 //	1 --> Deny save
 
-//SERV.SaveStatics	//Uncomment this line if you are building your server, so static items are saved also with normal saves, or comment it again in live servers to speed up the save proccess (if commented, you MUST type manually .serv.savestatics to save static items)
-
+SERV.SaveStatics	//Uncomment this line if you are building your server, so static items are saved also with normal saves, or comment it again in live servers to speed up the save proccess (if commented, you MUST type manually .serv.savestatics to save static items)
 
 [FUNCTION f_onserver_save_ok]
 // This function is called after server has saved correctly (once per stage with background save).
@@ -165,7 +183,7 @@ f_DTL_mdb_update 		// Load into MDB (in-memory database) the database file used 
 // This function is called after server completely finished saving (also at end of background save).
 // Variables:
 //	ARGS --> Time it took to save (in seconds, 4 digit precision)
-
+//serv.allclients sysmessage @,,1 World save completed, took <args> seconds.
 
 [FUNCTION f_onserver_blockip]
 // This function is called when an IP get blocked from the server.
@@ -173,8 +191,56 @@ f_DTL_mdb_update 		// Load into MDB (in-memory database) the database file used 
 //	ARGS  --> IP being blocked
 //	ARGN1 --> Time to block the IP, in tenths of second (writable)
 
-
 [FUNCTION f_onserver_timer]
 // This function is called periodically at every X minutes (value is defined on TimerCall setting of sphere.ini).
+DB.EXECUTE "UPDATE idng.info SET time='<serv.time>'"
+
+if (<serv.rtime.format %M> == 00)
+    serv.allclients sysmessageua 01f4,0,0,cze Je právě <serv.rtime.format %H>:<serv.rtime.format %M>.
+    f_change_light1 <serv.rtime.format %H>
+endif
+
+[function f_change_light1]
+serv.newitem i_gold
+new.p=1,1
+obj=<new.uid>
+
+doswitch <eval <args>>
+    var.daylight = 25    // 0
+    var.daylight = 25    // 1
+    var.daylight = 25    // 2
+    var.daylight = 25    // 3
+    var.daylight = 20    // 4
+    var.daylight = 15    // 5
+    var.daylight = 10    // 6
+    var.daylight = 5    // 7
+    var.daylight = 0    // 8
+    var.daylight = 0    // 9
+    var.daylight = 0    // 10
+    var.daylight = 0    // 11
+    var.daylight = 0    // 12
+    var.daylight = 0    // 13
+    var.daylight = 0    // 14
+    var.daylight = 0    // 15
+    var.daylight = 5    // 16
+    var.daylight = 5    // 17
+    var.daylight = 10    // 18
+    var.daylight = 10    // 19
+    var.daylight = 15    // 20
+    var.daylight = 20    // 21
+    var.daylight = 25    // 22
+    var.daylight = 25    // 23
+enddo
+  
+obj.region.light=<eval <var0.daylight>>
+obj.remove
+
+if <eval <var.oldlight>> < <eval <var.daylight>>
+    serv.allclients sysmessageua 01f4,0,0,cze Stmívá se.
+elseif <eval <var.oldlight>> > <eval <var.daylight>>
+    serv.allclients sysmessageua 01f4,0,0,cze Rozednívá se.
+endif
+
+var.oldlight = <eval <var.daylight>>
 
 [EOF]
