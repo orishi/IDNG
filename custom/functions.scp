@@ -179,7 +179,7 @@ if (<account.plevel >= 7)
 endif
 
 [function oemote]
-sayua 026,2,0,1 *<args>*
+sayua <emotecolor>,2,0,1 *<args>*
 
 [function osay]
 sayua <speechcolor>,0,0,1 <args>
