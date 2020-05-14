@@ -71,6 +71,22 @@ stones/towns/
 housing/
 
 scripts/custom/
+scripts/custom/worldgen/
+scripts/custom/worldgen/spawns/
+scripts/custom/worldgen/spawns/felucca/
+scripts/custom/worldgen/spawns/trammel/
+scripts/custom/worldgen/spawns/ilshenar/
+scripts/custom/worldgen/spawns/malas/
+scripts/custom/worldgen/spawns/tokuno/
+scripts/custom/worldgen/spawns/termur/
+scripts/custom/worldgen/decoration/
+scripts/custom/worldgen/decoration/felucca/
+scripts/custom/worldgen/decoration/ilshenar/
+scripts/custom/worldgen/decoration/malas/
+scripts/custom/worldgen/decoration/misc/
+scripts/custom/worldgen/decoration/termur/
+scripts/custom/worldgen/decoration/tokuno/
+scripts/custom/worldgen/decoration/trammel/
 
 // maps
 maps/map0/map0_starts.scp

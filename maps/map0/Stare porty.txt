@@ -1,0 +1,93 @@
+Smazané porty: 
+5874,146,30,0=5208,2323,30,0=tp_north_ice_2
+5875,146,30,0=5208,2322,32,0=tp_north_ice_3
+5207,2322,25,0=5877,147,25,0=tp_ice_north_3  (Ice dung)
+5207,2323,25,0=5876,147,25,0=tp_ice_north_2
+5203,2327,25,0=5876,147,25,0=tp_ice_north_1
+
+2399,198,0,0=5753,436,80,0=tp_NMinoc_SwampPassage
+2400,198,0,0=5754,436,80,0=tp_NMinoc_SwampPassage (trp balron)
+5753,437,77,0=2400,199,0,0=tp_SwampPassage_NMinoc
+5731,445,-20,0=6087,3676,17,0=tp_SwampPassage_Swamp_1
+
+5753,325,10,0=5670,2391,40,0=tp_Passagetolighthouse_lighthouse
+5670,2391,40,0=5753,325,10,0=tp_lighthouse_Passagetolighthouse (Majak)
+
+5748,362,3,0=312,786,-24,0=tp_Passagetolighthouse_Yew
+5750,362,5,0=312,786,-24,0=tp_Passagetolighthouse_Yew (Quest hlava - Corwin)
+5749,363,2,0=312,786,-24,0=tp_Passagetolighthouse_Yew
+313,786,-24,0=5748,361,0,0=tp_Yew_Passagetolighthouse
+314,786,-24,0=5749,361,2,0=tp_Yew_Passagetolighthouse
+
+5686,385,2,0=2777,894,-23,0=tp_CemetaryPassage_VesperCemetary
+5686,386,3,0=2777,894,-23,0=tp_CemetaryPassage_VesperCemetary (Vesper hrbitov - T2A)
+5686,387,2,0=2777,895,-23,0=tp_CemetaryPassage_VesperCemetary
+
+5658,423,8,0=5697,3659,2,0=tp_CemetaryPassage_SPapusCemetary (-,,-)
+2776,895,-23,0=5685,387,2,0=tp_VesperCemetary_CemetaryPassage
+5697,3660,-5,0=5658,424,-1,0=tp_SPapuaCemetary_CemetaryPassage
+
+5850,431,2,0=5127,3143,98,0=tp_DeadPassage_dead_2
+5850,432,2,0=5127,3143,98,0=tp_DeadPassage_dead_1
+5850,433,2,0=5127,3143,98,0=tp_DeadPassage_dead_2 (drow ostrov - t2a)
+5850,434,-2,0=5127,3143,98,0=tp_DeadPassage_dead_1
+5826,465,-1,0=1987,2063,-40,0=tp_DeadPassage_MarbleBuild
+5827,465,-1,0=1988,2063,-40,0=tp_DeadPassage_MarbleBuild
+5828,465,-2,0=1989,2063,-40,0=tp_DeadPassage_MarbleBuild
+
+1987,2062,-40,0=5826,464,1,0=tp_MarbleBuild_DeadPassage
+1988,2062,-40,0=5827,464,1,0=tp_MarbleBuild_DeadPassage  (-,,-)
+1989,2062,-40,0=5828,464,-1,0=tp_MarbleBuild_DeadPassage
+
+5126,3143,99,0=5849,432,2,0=tp_dead_DeadPassage
+
+4545,851,30,0=5736,3196,10,0=tp_moonglow_papua_1_recdu (Moonglow > Papua)
+5736,3196,10,0=4545,851,30,0=tp_papua_moonglow_1_recsu
+
+6005,1378,0,0=5151,4062,37,0=tp_trinsicpassage_delucia1
+6005,1379,0,0=5151,4062,37,0=tp_trinsicpassage_delucia2
+6005,1380,0,0=5151,4063,37,0=tp_trinsicpassage_delucia3   (delucie trinsic)
+5150,4062,40,0=6005,1378,0,0=tp_delucia_trinsicpassage1
+5150,4063,40,0=6005,1379,0,0=tp_delucia_trinsicpassage2
+
+6025,1344,-26,0=5137,3664,30,0=tp_trinsicpassage2b_WCityofDead
+6025,1345,-26,0=5137,3664,30,0=tp_trinsicpassage2b_WCityofDead  (trin >> CotD)
+6025,1346,-24,0=5137,3665,28,0=tp_trinsicpassage2b_WCityofDead
+
+5137,3664,30,0=6025,1344,-26,0=tp_WCityofDead_trinsicpassage2b
+5137,3665,27,0=6025,1345,-26,0=tp_WCityofDead_trinsicpassage2b
+
+5792,1415,43,0=5758,2907,16,0=tp_lava_lavaland
+5792,1416,37,0=5758,2908,16,0=tp_lava_lavaland_1  (fire > Poust)
+5792,1417,42,0=5758,2909,14,0=tp_lava_lavaland_2
+
+5757,2907,15,0=5791,1415,39,0=tp_lavaland_lava_1
+5757,2908,15,0=5791,1416,38,0=tp_lavaland_lava_2 (poust > fire)
+5757,2909,15,0=5791,1417,40,0=tp_lavaland_lava
+
+6140,1431,4,0=6137,1408,3,0=tp_BritSewer_SewerPassage
+6141,1431,4,0=6138,1408,3,0=tp_BritSewer_SewerPassage
+6137,1409,2,0=6140,1432,4,0=tp_SewerPassage_BritSewer
+6138,1409,2,0=6141,1432,4,0=tp_SewerPassage_BritSewer  (Brit stoka > T2a)
+6125,1411,15,0=6075,3332,2,0=tp_SewerPassage_Swamp
+6126,1411,15,0=6075,3332,2,0=tp_SewerPassage_Swamp
+6127,1411,15,0=6075,3332,2,0=tp_SewerPassage_Swamp
+
+5974,2697,35,0=2985,2890,35,0=tp_T2ApillarE_BritPillarE_sueacron
+5267,2757,35,0=424,3283,35,0=tp_T2APillarW_BritPillarW_sueacron  (hadi more)
+2985,2890,35,0=5974,2697,35,0=tp_BritPillarE_T2APillarE_doracron
+424,3283,35,0=5267,2757,35,0=tp_BritPillarW_T2APillarW_doracron
+
+1653,2963,0,0=1677,2987,0,0=tp_ValleyCave_ValleyCellar
+1677,2987,0,0=1675,2987,20,0=tp_ValleyCellar_Valley1stFloor  (dum nad trincicem)
+
+6075,3332,2,0=6126,1410,15,0=tp_Swamp_SewerPassage
+
+6086,3676,15,0=5731,446,-20,0=tp_Swamp_SwampPassage 
+
+2494,3576,5,0=5906,4069,26,0=tp_TempleIsle_EDeluciaTemple  ( Ostrov Mrtvych > t2a )
+5906,4069,26,0=2494,3576,5,0=tp_EDeluciaTemple_TempleIsle
+
+
+
+
