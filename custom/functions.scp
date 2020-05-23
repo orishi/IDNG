@@ -184,28 +184,28 @@ sayua 026,2,0,1 *<args>*
 [function osay]
 sayua <speechcolor>,0,0,1 <args>
 
-[function ocontrol]
-sysmessage Koho chceš ovládat?
-targetf f_ocontrol
+// [function ocontrol]
+// sysmessage Koho chceš ovládat?
+// targetf f_ocontrol
 
-[function f_ocontrol]
-obj = <argo.uid>
+// [function f_ocontrol]
+// obj = <argo.uid>
 
-if (<obj.npc>)
-	obj.control
-	shrink 1
-endif
+// if (<obj.npc>)
+	// obj.control
+	// shrink 1
+// endif
 
-[typedef t_figurine]
-on=@dclick
-obj=<more2>
-obj.invis=1
-obj.invul=0
-src.timerf 1,f_unshrink,<more2>
+// [typedef t_figurine]
+// on=@dclick
+// obj=<more2>
+// obj.invis=1
+// obj.invul=0
+// src.timerf 1,f_unshrink,<more2>
 
-[function f_unshrink]
-obj=<args>
-obj.control
+// [function f_unshrink]
+// obj=<args>
+// obj.control
 
 [function addtopack]
 args=<qval <isnum <args>> ? <resdef.<serv.itemdef.<resourceindex <args>>.defname>> : <resdef.<args>>>
