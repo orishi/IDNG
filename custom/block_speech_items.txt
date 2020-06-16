@@ -1,0 +1,34 @@
+[speech spk_block]
+on=*
+local.uid=<uid>
+forplayers <serv.distancetalk> //18
+  local.player=<uid>
+  foritems <serv.distancetalk>
+    if (<tag0.can_i_block_speech>)
+      if (<p.x> > <uid.<local.uid>.p.x>)
+        if (<p.x> < <uid.<local.player>.p.x>)
+          local.canblockspeech<local.player>=1
+        endif
+      elseif (<p.x> < <uid.<local.uid>.p.x>)
+        if (<p.x> > <uid.<local.player>.p.x>)
+          local.canblockspeech<local.player>=1
+        endif
+      endif
+      if (<p.y> > <uid.<local.uid>.p.y>)
+        if (<p.y> < <uid.<local.player>.p.y>)
+          local.canblockspeech<local.player>=1
+        endif
+      elseif (<p.y> < <uid.<local.uid>.p.y>)
+        if (<p.y> > <uid.<local.player>.p.y>)
+          local.canblockspeech<local.player>=1
+        endif
+      endif
+    endif
+  endfor
+endfor
+forplayers <serv.distancetalk>
+  if !(<local.canblockspeech<local.player>>)
+    trysrc <uid> uid.<local.uid>.message @<uid.<local.uid>.speechcolor> <args> //speech?
+  endif
+endfor
+return 1 //halt default behavior

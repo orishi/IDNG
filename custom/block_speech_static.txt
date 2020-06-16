@@ -1,0 +1,64 @@
+[speech spk_block]
+on=*
+local.uid=<uid>
+for x -18 18
+  for y -18 18
+    if (<serv.map(<eval <p.x> +<local.x>>,<eval <p.y> +<local.y>>,0,<map>).p.statics>)
+      for s 0 <eval <serv.map(<eval <p.x> +<local.x>>,<eval <p.y> +<local.y>>,0,<map>).p.statics> +-1>
+        if ( <serv.map(<eval <p.x> +<local.x>>,<eval <p.y> +<local.y>>,0,<map>).p.statics.<local.s>.can> & can_i_block )
+          forplayers 18
+	    if (<eval <uid.<local.uid>.p.x> +<local.x>> > <uid.<local.uid>.p.x>)
+              if (<eval <uid.<local.uid>.p.x> +<local.x>> < <p.x>)
+                local.blockspeech<uid>=1
+              endif
+            elseif (<eval <uid.<local.uid>.p.x> +<local.x>> < <uid.<local.uid>.p.x>)
+              if (<eval <uid.<local.uid>.p.x> +<local.x>> > <p.x>)
+                local.blockspeech<uid>=1
+              endif
+            endif
+	    if (<eval <uid.<local.uid>.p.y> +<local.y>> > <uid.<local.uid>.p.y>)
+              if (<eval <uid.<local.uid>.p.y> +<local.y>> < <p.y>)
+                local.blockspeech<uid>=1
+              endif
+            elseif (<eval <uid.<local.uid>.p.y> +<local.y>> < <uid.<local.uid>.p.y>)
+              if (<eval <uid.<local.uid>.p.y> +<local.y>> > <p.y>)
+                local.blockspeech<uid>=1
+              endif
+            endif
+          endfor
+        endif
+      endfor
+    endif
+  endfor
+endfor
+forplayers 18
+  local.player=<uid>
+  foritems 18
+    if ( <can> & can_i_block )
+      if (<p.x> > <uid.<local.uid>.p.x>)
+        if (<p.x> < <uid.<local.player>.p.x>)
+          local.blockspeech<local.player>=1
+        endif
+      elseif (<p.x> < <uid.<local.uid>.p.x>)
+        if (<p.x> > <uid.<local.player>.p.x>)
+          local.blockspeech<local.player>=1
+        endif
+      endif
+      if (<p.y> > <uid.<local.uid>.p.y>)
+        if (<p.y> < <uid.<local.player>.p.y>)
+          local.blockspeech<local.player>=1
+        endif
+      elseif (<p.y> < <uid.<local.uid>.p.y>)
+        if (<p.y> > <uid.<local.player>.p.y>)
+          local.blockspeech<local.player>=1
+        endif
+      endif
+    endif
+  endfor
+endfor
+forplayers 18
+  if !(<local.blockspeech<uid>>)
+    trysrc <uid> uid.<local.uid>.message @<uid.<local.uid>.speechcolor> <args>
+  endif
+endfor
+return 1
