@@ -142,7 +142,7 @@ if (<local.damage> < 1)
 endif
 
 argn1=<local.damage>
-argn2=<def.dam_god>
+argn2=<def.dam_fixed> //dam_god
 
 on=@gethit
 local.itemdamagechance=1
