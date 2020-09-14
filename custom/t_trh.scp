@@ -5,7 +5,7 @@ if (<src.isplayer>)
 		src.sysmessage Musíš chvíli počkat.
 	else
 		src.tag.porttrh_p=<p>
-		src.ctag.lastdclick=<eval <serv.time> + 100> //10 vteřin
+		src.ctag.porttrh=<eval <serv.time> + 100> //10 vteřin
 		src.go 4572,2406,-2
 	endif
 endif
@@ -13,7 +13,7 @@ endif
 [typedef t_porttrh2]
 on=@step
 if (<src.isplayer>)
-	src.ctag.lastdclick=<eval <serv.time> + 100>
+	src.ctag.porttrh=<eval <serv.time> + 100>
 	src.go <src.tag0.porttrh_p>
 	src.timerf 10,f_porttrh_remove
 ENDIF

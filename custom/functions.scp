@@ -1,4 +1,12 @@
-﻿[function sql_requibld]
+﻿[function renametrh]
+forinstances i_rune_alchem_1
+	if (<type>==t_porttrh1)
+		name=Cesta na trziste
+		update
+	endif
+endfor
+
+[function sql_requibld]
 f_add_rebuild
 
 [function f_mysql_date]
