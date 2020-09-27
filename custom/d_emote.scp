@@ -79,17 +79,17 @@ oemote rozhlíží se
 sdialog d_emote
 
 on=101
-sound <sex 1073/794>
+osound <sex 1073/794>
 oemote směje se
 sdialog d_emote
 
 on=102
-sound <sex 1066/794>
+osound <sex 1066/794>
 oemote hihňá se
 sdialog d_emote
 
 on=103
-sound <sex 1055/784>
+osound <sex 1055/784>
 oemote <sex odkašlal/odkašlala> si
 sdialog d_emote
 
@@ -113,7 +113,7 @@ oemote <sex sehnul/sehnula> se
 sdialog d_emote
 
 on=108
-sound <sex 1056/784>
+osound <sex 1056/784>
 oemote <sex zakašlal/zakašlala>
 sdialog d_emote
 
@@ -122,7 +122,7 @@ oemote dívá se vzhůru
 sdialog d_emote
 
 on=110
-sound <sex 1051/780>
+osound <sex 1051/780>
 oemote <sex zatleskal/zatleskala>
 sdialog d_emote
 
@@ -145,37 +145,37 @@ oemote klepe
 sdialog d_emote
 
 on=115
-sound <sex 1058/787>
+osound <sex 1058/787>
 oemote pláče
 sdialog d_emote
 
 on=116
-sound <sex 1072/800>
+osound <sex 1072/800>
 oemote posílá polibek
 sdialog d_emote
 
 on=117
-sound <sex 1091/817>
+osound <sex 1091/817>
 oemote kýchá
 sdialog d_emote
 
 on=118
-sound <sex 1096/822>
+osound <sex 1096/822>
 oemote zívá
 sdialog d_emote
 
 on=119
-sound <sex 1089/815>
+osound <sex 1089/815>
 oemote pššššt
 sdialog d_emote
 
 on=120
-sound <sex 1065/793>
+osound <sex 1065/793>
 oemote <sex lekl/lekla> se
 sdialog d_emote
 
 on=121
-sound <sex 1095/821>
+osound <sex 1095/821>
 oemote píská
 sdialog d_emote
 
@@ -190,7 +190,7 @@ morex=0
 
 on=@timer
 if (<eval <morex>> < 3)
-	sound 933
+	osound 933
 	morex=<eval <morex>+1>
 	timerd=2
 else

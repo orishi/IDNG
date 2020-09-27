@@ -6,17 +6,80 @@ VERSION=X1
 
 [SPEECH spk_player]
 // All players speech filtered through here.
-ON=I must consider my sins
-SYSMESSAGE Murders: <KILLS>
+// ON=I must consider my sins
+// SYSMESSAGE Murders: <KILLS>
 
-ON=I resign from my guild
-IF (<GUILD>)
- f_guildsys_removecharfromguild <GUILD>,<UID>
-ENDIF
+// ON=I resign from my guild
+// IF (<GUILD>)
+ // f_guildsys_removecharfromguild <GUILD>,<UID>
+// ENDIF
 
-ON=I resign from my town
-IF (<TOWN>)
- f_townsys_removecharfromtown <TOWN>,<UID>
-ENDIF
+// ON=I resign from my town
+// IF (<TOWN>)
+ // f_townsys_removecharfromtown <TOWN>,<UID>
+// ENDIF
+
+on=*
+//src autor, [] prijemce
+
+ref1=<uid>
+ref2=<src.uid>
+local.hear_dist=18
+local.color=<speechcolor>
+
+if (<argn1>==talkmode_emote)
+	local.color=<emotecolor>
+endif
+
+if (<argn1>==talkmode_whisper)
+	local.hear_dist=1
+elseif (<argn1>==talkmode_yell)
+	local.hear_dist=31
+endif
+
+forplayers <eval <local.hear_dist>>
+  ref3=<uid>
+  foritems <eval <local.hear_dist>>
+    if (<can> & can_i_block)
+      if (<p.x> > <ref1.p.x>)
+        if (<p.x> < <ref3.p.x>)
+          local.blockspeech.<ref2>=1
+		  say a
+        endif
+      elseif (<p.x> < <ref1.p.x>)
+        if (<p.x> > <ref3.p.x>)
+          local.blockspeech.<ref2>=1
+		  say b
+        endif
+      endif
+      if (<p.y> > <ref1.p.y>)
+        if (<p.y> < <ref3.p.y>)
+          local.blockspeech.<ref2>=1
+		  say c
+        endif
+      elseif (<p.y> < <ref1.p.y>)
+        if (<p.y> > <ref3.p.y>)
+          local.blockspeech.<ref2>=1
+		  say d
+        endif
+      endif
+    endif
+  endfor
+endfor
+
+		//if !(<local.blockspeech.<uid>>)
+
+forplayers <eval <local.hear_dist>>
+	if ((<ref2.isgm>) && (<ref2.flags>&statf_insubstantial)) //autor je GM v invisu
+		if (<isgm>) //prijemce je taky GM
+			ref1.trysrc <uid> messageua <local.color> <argn1> 0 1 <args>
+		endif
+	else
+		if !(<canseelos <ref2>>)
+			ref1.trysrc <uid> messageua <local.color> <argn1> 0 1 <args>
+		endif
+	endif
+endfor
+return 1
 
 [EOF]

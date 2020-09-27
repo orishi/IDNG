@@ -93,9 +93,10 @@ endif
 
 [itemdef i_blocker]
 defname=i_blocker
-id=2519
+id=i_plate
 name=Blocker
 type=t_normal
+can=can_i_block|can_i_blocklos
 category=GM Items
 subsection=Blockery
 description=Blocker (nelze projit)
