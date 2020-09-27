@@ -55,7 +55,6 @@ if (<act.region.isevent.r_cleanup>)
 	argn1=30*60*10
 endif
 
-
 on=@itemequip
 if ((<act.type> == t_weapon_bow) || (<act.type> == t_weapon_xbow))
 	for 3 24
@@ -155,4 +154,20 @@ if (<findlayer.2.type>==t_shield)
 		sound 42
 		argn1=0
 	endif
+endif
+
+on=@itempickup_pack 
+if ((<src.action>==skill_alchemy) || (<src.action>==skill_blacksmith) || (<src.action>==skill_bowcraft) || (<src.action>==skill_carpentry) || (<src.action>==skill_cooking) || (<src.action>==skill_cartography) || (<src.action>==skill_inscription) || (<src.action>==skill_tailoring) || (<src.action>==skill_tinkering) || (<src.action>==skill_mining) || (<src.action>==skill_lumberjack))
+	src.sysmessage Jsi příliš zaneprázdněn prací, nemůžeš brát nic dalšího do rukou.
+	return 1
+elseif (<src.action>==skill_magery)
+	action -1
+endif
+
+on=@itempickup_ground 
+if ((<src.action>==skill_alchemy) || (<src.action>==skill_blacksmith) || (<src.action>==skill_bowcraft) || (<src.action>==skill_carpentry) || (<src.action>==skill_cooking) || (<src.action>==skill_cartography) || (<src.action>==skill_inscription) || (<src.action>==skill_tailoring) || (<src.action>==skill_tinkering) || (<src.action>==skill_mining) || (<src.action>==skill_lumberjack))
+	src.sysmessage Jsi příliš zaneprázdněn prací, nemůžeš brát nic dalšího do rukou.
+	return 1
+elseif (<src.action>==skill_magery)
+	action -1
 endif
