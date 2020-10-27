@@ -22,30 +22,6 @@ Carpentry
 ON=i_board boards
 MAKEITEM=i_board
 
-ON=i_board_oak oak boards
-MAKEITEM=i_board_oak
-
-ON=i_board_ash ash boards
-MAKEITEM=i_board_ash
-
-ON=i_board_mahagon mahagon boards
-MAKEITEM=i_board_mahagon
-
-ON=i_board_ebony ebony boards
-MAKEITEM=i_board_ebony
-
-ON=i_board_yew yew boards
-MAKEITEM=i_board_yew
-
-ON=i_board_bloodwood bloodwood boards
-MAKEITEM=i_board_bloodwood
-
-ON=i_board_heartwood heartwood boards
-MAKEITEM=i_board_heartwood
-
-ON=i_board_frostwood frostwood boards
-MAKEITEM=i_board_frostwood
-
 ON=i_chair_throne Chairs
 SKILLMENU=sm_wood_chairs
 
@@ -375,3 +351,5 @@ MAKEITEM=i_BED_7
 
 ON=i_BED_8 <name> (<resmake>)
 MAKEITEM=i_BED_8
+
+[EOF]
